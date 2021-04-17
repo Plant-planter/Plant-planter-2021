@@ -34,7 +34,8 @@
 
     -JS
     0) onLoad() - load default if new garden, or saved garden data if saved
-    1) allow user to rename garden
+    1) allow user to rename garden 
+        - check to be unique
     2) Auto generate cute garden avatar icon
     3) select element for dropdown locations
     4) select element for soil type dropdown
@@ -64,3 +65,14 @@
         - options stored in variables to change data sets
         - We want to allow user to choose that reflects ideal harvest time
             - If I plant on this date, when can I see vegetable
+
+### Local Storage
+    -Gardens (3)
+        - name (unique)
+        - avatar
+        - location
+        - soil type
+        - row arrays: each row array contains (5) box objects 
+            - soilType
+            - plantId 
+            - datePlanted 
