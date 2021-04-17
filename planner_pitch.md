@@ -11,9 +11,12 @@ We will have a standup each morning and each team member can briefly speak about
 
 ### Project Scope
 Minimum Viable Product
-1) Log in page
-2) A Setup page that allows users to choose soil type and region. This will influence data metrics on the chart page
-3) A garden page: 
+1) Choose Your Garden Page
+    -Create a new garden section
+    -Clicking 'create a new garden' updates form with new garden below that includes garden creation options...
+    -Users to choose soil type and region. This will influence data metrics on the chart page
+    -Button that takes user to garden 
+2) A garden page: 
     - Displays a 5x5 grid.
     - Each grid allows you to change soil type
     - Each grid allows for plant selection via dropdown menu
@@ -21,8 +24,11 @@ Minimum Viable Product
     - Data visualization page: JS  chart displays optimum growth / harvest per plant, and frost dates
 
 ### Stretch goals: 
-1)Grid indicates whether soil type is ideal for selected plant i.e. plant placement success indicator that visually alerts user if bad match
+1) Grid indicates whether soil type is ideal for selected plant i.e. plant placement success indicator that visually alerts user if bad match
 2) Customizable grid size
+3) Print Chart
+4) Save gardens
+5) Edit existing garden
 
 ### Tools Organization
 - Create repo inside organization
