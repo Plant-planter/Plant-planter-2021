@@ -37,17 +37,20 @@ Minimum Viable Product
 - Use eslintrc file found in main repository
 - Use a gitignore file
 
-
 ### File Structure
 /assets/
     - /plants/
     - /images/
-/data/
+/chart/
     - chart.js
-    - data.js
     - index.html
-/plant/
-    - plant.js
+/data/
+    - data.js
+/garden/
+    - garden.js
+    - index.html
+/setup/
+    - setup.js
     - index.html
 /styles/
     - style.css
