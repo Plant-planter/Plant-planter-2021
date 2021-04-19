@@ -69,6 +69,14 @@
         - We want to allow user to choose that reflects ideal harvest time
             - If I plant on this date, when can I see vegetable
 
+### About Us Page
+    -HTML
+    0) <header> with app name and nav
+    1) Table: 
+        - Portrait or avatar in L TD
+        - Blurb in R TD
+        - Austin, Annaleigh, Casey, Clem, Culi
+        
 ### Local Storage
     -Gardens (3)
         - name (unique)
