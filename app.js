@@ -3,6 +3,7 @@ import { getGardens, createGarden } from './local-storage-utilities.js';
 import { renderGarden } from './dom-utils.js';
 
 const gardenList = document.querySelector('.gardens');
+const createButton = document.querySelector('#create');
 
 createGarden('test_garden', './assets/alchemy-logo.png');
 createGarden('test_garden2', './assets/alchemy-logo.png');
@@ -21,5 +22,8 @@ function loadGardens() {
 }
 
 // set event listeners to update state and DOM
+createButton.addEventListener('click', () => {
+
+});
 
 loadGardens();
