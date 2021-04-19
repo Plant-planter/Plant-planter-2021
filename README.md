@@ -7,11 +7,12 @@
     -HTML "Logo" on L, Nav bar on R w/ create garden, garden setup, garden, chart
         - Culi's function
 
-### Create Garden Page
+### Create Garden Page (Home)
     -HTML
     0) <Header> above with app name and nav
     1) List of gardens user may have already created
-        - Clicking a garden will redirect to garden setup page. 
+        - Clicking a garden will redirect to garden setup page.
+        - button (to clear garden already created) 
     2) Create garden input field 
         - button (to create that garden)
 
