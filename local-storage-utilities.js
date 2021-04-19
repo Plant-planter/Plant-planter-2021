@@ -1,3 +1,5 @@
+const GARDENS = 'GARDENS';
+
 export function createGarden(name, avatar){
     const gardens = {
         name: name,
