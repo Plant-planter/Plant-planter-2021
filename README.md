@@ -80,4 +80,5 @@
 ### Plant Data Model
     - ideal plant and harvest date
     - pH
-    - Habit determinds plant icon (flower, tree, bush, grassh, etc...)
+    - Habit determinds plant icon (flower, tree, bush, grass, etc...)
+    - more...
