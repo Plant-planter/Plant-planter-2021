@@ -18,16 +18,16 @@
 
     </header>
     <main>
-        <form name="set-page-form">
-            <label><input name="garden-name"></label>
-            <label><select>
+        <form name="setup-page-form">
+            <label><input name="garden-name" class="garden-name" id="garden-name"></label>
+            <label><select name="location-select">
                     <option>Portland</option>
                 </select></label>
-            <div>
-                <label><input type="radio" name="avatar"></label>
-                <label><input type="radio" name="avatar"></label>
-                <label><input type="radio" name="avatar"></label>
-                <label><input type="radio" name="avatar"></label>
+            <div name="radio-avatar">
+                <label><input type="radio" name="avatar" value="pic1"></label>
+                <label><input type="radio" name="avatar" value="pic2"></label>
+                <label><input type="radio" name="avatar" value="pic3"></label>
+                <label><input type="radio" name="avatar" value="pic4"></label>
             </div>
 
             <button>Create Garden</button>

@@ -12,5 +12,9 @@
         "statusBarItem.remoteBackground": "#616800",
         "statusBar.debuggingForeground": "#000000",
         "statusBar.debuggingBackground": "#CC7E58"
-    }
+    },
+    "workbench.colorTheme": "graygraygray",
+    "workbench.preferredDarkColorTheme": "graygraygray",
+    "workbench.preferredHighContrastColorTheme": "graygraygray",
+    "workbench.preferredLightColorTheme": "graygraygray"
 }

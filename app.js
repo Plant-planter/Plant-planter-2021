@@ -35,7 +35,7 @@ form.addEventListener('submit', (e) => {
 
     setCurrentGarden(gardenName);
 
-    window.location = './setup';
+    window.location = './setup/';
 });
 
 loadGardens();
