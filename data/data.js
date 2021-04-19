@@ -1,3 +1,5 @@
+/* eslint disable */
+
 export const plants = {
     "zea-mays": {
       "slug": "zea-mays",
