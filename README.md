@@ -74,11 +74,8 @@
         - name (unique)
         - avatar
         - location
-        - soil type
         - row arrays: each row array contains (5) box objects 
-            - soilType
-            - plantId 
-            - datePlanted
+            - plant object
 
 ### Plant Data Model
     - ideal plant and harvest date
