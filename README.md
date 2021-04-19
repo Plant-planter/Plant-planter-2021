@@ -59,7 +59,8 @@
     -HTML
     0) <Header> above with app name and nav
     1) <canvas> for chart and script tag w/ link to install 
-    2) options for what to display
+    2) Displays when you should plant and harvest
+    3) Ability to change data to show?
 
     -JS
     1) Timeline Chart
@@ -76,4 +77,8 @@
         - row arrays: each row array contains (5) box objects 
             - soilType
             - plantId 
-            - datePlanted 
+            - datePlanted
+
+### Plant Data Model
+    - ideal plant and harvest date
+    - more...
