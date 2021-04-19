@@ -1,4 +1,5 @@
 const GARDENS = 'GARDENS';
+const CURRENTGARDEN = 'CURRENTGARDEN';
 
 export function getGardens() {
     const gardens = localStorage.getItem(GARDENS);
@@ -39,3 +40,13 @@ export function createGarden(name, avatar = '') {
 
     return value;
 }
+
+export function setCurrentGarden(gardenName) {
+    localStorage.setItem(CURRENTGARDEN, gardenName);
+}
+
+export function getCurrentGarden() {
+    return localStorage.getItem(CURRENTGARDEN);
+
+}
+

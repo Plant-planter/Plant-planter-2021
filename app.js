@@ -1,6 +1,7 @@
 // import functions and grab DOM elements
-import { getGardens, createGarden } from './local-storage-utilities.js';
+import { getGardens, createGarden, setCurrentGarden } from './local-storage-utilities.js';
 import { renderGarden } from './dom-utils.js';
+
 
 const gardenList = document.querySelector('.gardens');
 const form = document.querySelector('form');
@@ -29,8 +30,12 @@ form.addEventListener('submit', (e) => {
         console.log('Name Taken');
         return false;
     }
+
     createGarden(gardenName);
-    window.location = './garden';
+
+    setCurrentGarden(gardenName);
+
+    window.location = './setup';
 });
 
 loadGardens();
