@@ -27,7 +27,7 @@ export function getSpecificGarden(gardenName) {
     return gardens[gardenName];
 }
 
-export function createGarden(name, avatar) {
+export function createGarden(name, avatar = '') {
     const value = {
         name: name,
         avatar: avatar,
