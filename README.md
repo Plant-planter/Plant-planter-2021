@@ -7,11 +7,12 @@
     -HTML "Logo" on L, Nav bar on R w/ create garden, garden setup, garden, chart
         - Culi's function
 
-### Create Garden Page
+### Create Garden Page (Home)
     -HTML
     0) <Header> above with app name and nav
     1) List of gardens user may have already created
-        - Clicking a garden will redirect to garden setup page. 
+        - Clicking a garden will redirect to garden setup page.
+        - button (to clear garden already created) 
     2) Create garden input field 
         - button (to create that garden)
 
@@ -26,9 +27,7 @@
     1) Loads default if new garden, or saved garden data if saved
         - Input with garden name already loaded (from create garden page)
         - Garden avatar beside garden name
-        - Choose from preset location (determines soil type and freeze data)
-            - dropdown or radio buttons for 3 locations
-        - Default soil type selection (pre-populated dropdown with 1st soil type already selected)
+        - Choose from preset location (determines things TBD)
     2) Create Garden button 
         - redirects to Garden Page
 
@@ -45,8 +44,10 @@
     -HTML
     0) <Header> above with app name and nav
     1) Load selected garden
-        - 5x5 grid - *how is this implemented?*
-        - L-Click allows plant choice and soil choice
+        - 5x5 grid - *how is this implemented?
+        - When plant is selected, grid background changes to ideal pH color (HSL)
+        - Plant portrait has unicode icon with related color to plant
+            - like, tree, flower, etc
         - L-Click may be a container with display grid that has form data
     2) Link below to chart
     
@@ -58,7 +59,9 @@
     -HTML
     0) <Header> above with app name and nav
     1) <canvas> for chart and script tag w/ link to install 
-    2) options for what to display
+    2) Displays when you should plant and harvest
+    3) ideal pH range
+    4) Ability to change data to show?
 
     -JS
     1) Timeline Chart
@@ -66,13 +69,24 @@
         - We want to allow user to choose that reflects ideal harvest time
             - If I plant on this date, when can I see vegetable
 
+### About Us Page
+    -HTML
+    0) <header> with app name and nav
+    1) Table: 
+        - Portrait or avatar in L TD
+        - Blurb in R TD
+        - Austin, Annaleigh, Casey, Clem, Culi
+        
 ### Local Storage
     -Gardens (3)
         - name (unique)
         - avatar
         - location
-        - soil type
         - row arrays: each row array contains (5) box objects 
-            - soilType
-            - plantId 
-            - datePlanted 
+            - plant object
+
+### Plant Data Model
+    - ideal plant and harvest date
+    - pH
+    - Habit determinds plant icon (flower, tree, bush, grass, etc...)
+    - more...

@@ -14,14 +14,16 @@ Minimum Viable Product
 1) Choose Your Garden Page
     -Create a new garden section
     -Clicking 'create a new garden' updates form with new garden below that includes garden creation options...
-    -Users to choose soil type and region. This will influence data metrics on the chart page
+    -Users to choose soil type and Portland region. This may influence data metrics on the chart page.
+    -Plant model will include when plant is best planted. This will influence data on the chart page.
     -Button that takes user to garden 
 2) A garden page: 
-    - Displays a 5x5 grid.
-    - Each grid allows you to change soil type
-    - Each grid allows for plant selection via dropdown menu
-    - Each grid holds one plant image of the selected type
-    - Data visualization page: JS  chart displays optimum growth / harvest per plant, and frost dates
+    - Displays a 5x5 grid
+    - Each grid allows for plant selection via popup menu
+    - Each grid contains plant symbol with color related to its flower color (unicode single folower avatar)
+    - Each grid's bkg color reflects ideal pH for soil
+    - Data visualization page: JS chart displays optimum growth / harvest per plant
+    - A chart to show ideal pH
 
 ### Stretch goals: 
 1) Grid indicates whether soil type is ideal for selected plant i.e. plant placement success indicator that visually alerts user if bad match
@@ -29,6 +31,7 @@ Minimum Viable Product
 3) Print Chart
 4) Save gardens
 5) Edit existing garden
+6) Expand regions
 
 ### Tools Organization
 - Create repo inside organization
