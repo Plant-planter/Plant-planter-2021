@@ -23,7 +23,7 @@ function loadGardens() {
 
 // set event listeners to update state and DOM
 createButton.addEventListener('click', () => {
-
+    // calls createGarden, sets window location
 });
 
 loadGardens();
