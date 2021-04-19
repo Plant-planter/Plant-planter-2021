@@ -18,11 +18,12 @@ Minimum Viable Product
     -Plant model will include when plant is best planted. This will influence data on the chart page.
     -Button that takes user to garden 
 2) A garden page: 
-    - Displays a 5x5 grid.
-    - Each grid allows you to change soil type on click
+    - Displays a 5x5 grid
     - Each grid allows for plant selection via popup menu
-    - Each grid holds one plant image of the selected type
-    - Data visualization page: JS  chart displays optimum growth / harvest per plant, and frost dates
+    - Each grid contains plant symbol with color related to its flower color (unicode single folower avatar)
+    - Each grid's bkg color reflects ideal pH for soil
+    - Data visualization page: JS chart displays optimum growth / harvest per plant
+    - A chart to show ideal pH
 
 ### Stretch goals: 
 1) Grid indicates whether soil type is ideal for selected plant i.e. plant placement success indicator that visually alerts user if bad match
