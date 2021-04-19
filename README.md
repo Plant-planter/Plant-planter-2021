@@ -46,8 +46,9 @@
     -HTML
     0) <Header> above with app name and nav
     1) Load selected garden
-        - 5x5 grid - *how is this implemented?*
-        - L-Click allows plant choice and soil choice
+        - 5x5 grid - *how is this implemented?
+        - When plant is selected, grid background changes to ideal pH color (HSL)
+        - Plant portrait has circle container with related color to plant
         - L-Click may be a container with display grid that has form data
     2) Link below to chart
     
@@ -60,7 +61,8 @@
     0) <Header> above with app name and nav
     1) <canvas> for chart and script tag w/ link to install 
     2) Displays when you should plant and harvest
-    3) Ability to change data to show?
+    3) ideal pH range
+    4) Ability to change data to show?
 
     -JS
     1) Timeline Chart
@@ -81,4 +83,4 @@
 
 ### Plant Data Model
     - ideal plant and harvest date
-    - more...
+    - ph
