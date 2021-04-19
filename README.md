@@ -27,9 +27,7 @@
     1) Loads default if new garden, or saved garden data if saved
         - Input with garden name already loaded (from create garden page)
         - Garden avatar beside garden name
-        - Choose from preset location (determines soil type and freeze data)
-            - dropdown or radio buttons for 3 locations
-        - Default soil type selection (pre-populated dropdown with 1st soil type already selected)
+        - Choose from preset location (determines things TBD)
     2) Create Garden button 
         - redirects to Garden Page
 
@@ -48,7 +46,8 @@
     1) Load selected garden
         - 5x5 grid - *how is this implemented?
         - When plant is selected, grid background changes to ideal pH color (HSL)
-        - Plant portrait has circle container with related color to plant
+        - Plant portrait has unicode icon with related color to plant
+            - like, tree, flower, etc
         - L-Click may be a container with display grid that has form data
     2) Link below to chart
     
@@ -83,4 +82,5 @@
 
 ### Plant Data Model
     - ideal plant and harvest date
-    - ph
+    - pH
+    - Habit determinds plant icon (flower, tree, bush, grassh, etc...)
