@@ -5,19 +5,36 @@ export function getGardens() {
 
     // if gardens doesn't exist, create it
     if (!gardens) {
-        localStorage.setItem(GARDENS, {});
-        return {}
+        localStorage.setItem(GARDENS, JSON.stringify({}));
+        return {};
     }
 
-    return JSON.parse(gardens);
+    const parsed_garden = JSON.parse(gardens)
+    return parsed_garden;
+}
+
+export function setGarden(name, garden) {
+    const gardens = getGardens();
+    gardens[name] = garden;
+
+    const stringyGardens = JSON.stringify(gardens);
+    localStorage.setItem(GARDENS, stringyGardens);
+}
+
+export function getSpecificGarden(gardenName) {
+    const gardens = getGardens();
+
+    return gardens[gardenName];
 }
 
 export function createGarden(name, avatar) {
-    const gardens = {
-        name: name,
+    const value = {
         avatar: avatar,
         location: 'Portland',
         rows: []
     };
-    return gardens;
+
+    setGarden(name, value);
+
+    return value;
 }
