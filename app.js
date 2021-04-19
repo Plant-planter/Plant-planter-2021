@@ -3,10 +3,7 @@ import { getGardens, createGarden } from './local-storage-utilities.js';
 import { renderGarden } from './dom-utils.js';
 
 const gardenList = document.querySelector('.gardens');
-const createButton = document.querySelector('#create');
-
-createGarden('test_garden', './assets/alchemy-logo.png');
-createGarden('test_garden2', './assets/alchemy-logo.png');
+const form = document.querySelector('form');
 
 // initialize state
 function loadGardens() {
@@ -22,8 +19,19 @@ function loadGardens() {
 }
 
 // set event listeners to update state and DOM
-createButton.addEventListener('click', () => {
+form.addEventListener('submit', (e) => {
     // calls createGarden, sets window location
+    e.preventDefault();
+    const formData = new FormData(form);
+    const gardenName = formData.get('garden-name');
+    const gardens = Object.keys(getGardens());
+    if (gardens.includes(gardenName)) {
+        console.log('Name Taken');
+        return false;
+    }
+    createGarden(gardenName);
+    window.location = './garden';
 });
 
 loadGardens();
+
