@@ -29,6 +29,7 @@ export function getSpecificGarden(gardenName) {
 
 export function createGarden(name, avatar) {
     const value = {
+        name: name,
         avatar: avatar,
         location: 'Portland',
         rows: []
