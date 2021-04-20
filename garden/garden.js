@@ -5,9 +5,13 @@ import { plants } from '../data/data.js';
 import { phToColor } from '../utils.js';
 
 // grab html elements
+const main = document.querySelector('main');
 const section = document.querySelector('.garden-grid');
 const plantSelector = document.getElementById('plant-selector');
 const printButton = document.querySelector('.print-button');
+const chartButton = document.querySelector('.chart-link');
+
+
 
 // set up state
 const gardenName = getCurrentGarden();
@@ -50,7 +54,7 @@ function generateGardenGrid() {
             const nRow = countRow - 1;
             const nCol = countCol - 1;
             div.addEventListener('click', () => {
-                console.log(plantSelector.value)
+                console.log(plantSelector.value);
                 if (plantSelector.value) {
                     // update the state
                     gardenObject.rows[nRow][nCol].plant = plantSelector.value;
@@ -64,6 +68,8 @@ function generateGardenGrid() {
 
             // append the child
             section.appendChild(div);
+            main.append(section);
+
         }
     }
 }
@@ -85,6 +91,10 @@ plantSelector.addEventListener('input', () => {
 
 printButton.addEventListener('click', () => {
     window.print();
+});
+
+chartButton.addEventListener('click', () => {
+    window.location = '../chart/index.html';
 });
 // initialize page 
 renderHeaderNav();

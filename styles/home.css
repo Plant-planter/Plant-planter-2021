@@ -1,7 +1,27 @@
 /* add home page styles here */
 .garden-slot img{
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    
+}
+
+.garden-slot {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    font-family: 'Cabin', sans-serif;
+}
+
+.garden-slot a {
+    text-decoration: none;
+    color: #616451
+}
+
+.garden-slot a:hover {
+    color: #77e287;
+}
+.garden-slot button {
+    height: 1.2rem;
+    border-radius: 5px;
 }
 
 .error-message{
