@@ -1,4 +1,4 @@
-
+import { getGardens, setGarden, setGardens } from './local-storage-utilities.js';
 
 export function renderGarden(gardenObject) {
     const div = document.createElement('div');
@@ -12,6 +12,14 @@ export function renderGarden(gardenObject) {
     anchor.href = '../garden/';
     delButton.textContent = '-';
 
+    delButton.addEventListener('click', () => {
+        const gardens = getGardens();
+        delete gardens[gardenObject.name];
+        setGardens(gardens);
+        location.reload();
+    });
+
     div.append(avatar, anchor, delButton);
     return div;
 }
+

@@ -1,3 +1,5 @@
+import { generateGrid } from './utils.js';
+
 const GARDENS = 'GARDENS';
 const CURRENTGARDEN = 'CURRENTGARDEN';
 
@@ -10,7 +12,7 @@ export function getGardens() {
         return {};
     }
 
-    const parsed_garden = JSON.parse(gardens)
+    const parsed_garden = JSON.parse(gardens);
     return parsed_garden;
 }
 
@@ -20,6 +22,10 @@ export function setGarden(name, garden) {
 
     const stringyGardens = JSON.stringify(gardens);
     localStorage.setItem(GARDENS, stringyGardens);
+}
+
+export function setGardens(gardens) {
+    localStorage.setItem(GARDENS, JSON.stringify(gardens));
 }
 
 export function getSpecificGarden(gardenName) {
@@ -33,11 +39,10 @@ export function createGarden(name, avatar = '') {
         name: name,
         avatar: avatar,
         location: 'Portland',
-        rows: []
+        rows: generateGrid(5)
     };
 
     setGarden(name, value);
-
     return value;
 }
 
