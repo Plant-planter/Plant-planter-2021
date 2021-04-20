@@ -20,8 +20,13 @@ function plantPlant(div, plantSlug) {
     div.classList.add('filled');
     div.textContent = '✿';
     const avgpH = (Number(plant.minPH) + Number(plant.maxPH)) / 2
-    div.style.color = ['red', 'blue', 'green', 'yellow', 'purple'][Math.floor(Math.random() * 5)];
+    div.style.color = plant.flowerColor;
+
+    // will remove this once pH function is implemented:
+    const bgColors = ['#ffadad', '#ffd6a5', '#fdffb6', '#caffbf', '#9bf6ff', '#a0c4ff', '#bdb2ff', '#ffc6ff', '#fffffc'];
+    div.style.backgroundColor = bgColors[Math.floor(Math.random() * bgColors.length)];
 }
+
 
 function generateGardenGrid() {
     let countRow = 0;
