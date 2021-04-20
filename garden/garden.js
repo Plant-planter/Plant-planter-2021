@@ -1,6 +1,5 @@
 import { renderHeaderNav } from '../dom-utils.js';
 import { getSpecificGarden, getCurrentGarden } from '../local-storage-utilities.js';
-import { generateGrid } from '../utils.js';
 import { plants } from '../data/data.js';
 
 renderHeaderNav();
@@ -11,12 +10,14 @@ function generateGardenGrid() {
     const gardenObject = getSpecificGarden(gardenName);
 
     const section = document.querySelector('.garden-grid');
-    let counter = 0;
+    let countRow = 0;
     for (let row of gardenObject.rows){
+        countRow++;
+        let countCol = 0;
         for (let box of row) {  //each row is an array, each box an object
-            counter++;
+            countCol++;
             const div = document.createElement('div');
-            div.textContent = `Box${counter}`;
+            div.textContent = `Box ${countRow} - ${countCol}`;
             section.appendChild(div);
         }
     }
