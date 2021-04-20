@@ -40,7 +40,7 @@ var harvestChart = new Chart(ctx, { //eslint-disable-line
         labels: names,
         datasets: [
             {
-                label: 'Minimum days til harvest',
+                label: 'Min Days Until Harvest',
                 data: minHarvest,
                 backgroundColor: 'lightpink',
                 borderColor: 'magenta',
@@ -48,7 +48,7 @@ var harvestChart = new Chart(ctx, { //eslint-disable-line
 
             },
             {
-                label: 'Maximum days til harvest',
+                label: 'Max Days Until Harvest ',
                 data: maxHarvest,
                 backgroundColor: 'lightgreen',
                 borderColor: 'green',

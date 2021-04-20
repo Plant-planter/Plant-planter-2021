@@ -26,6 +26,8 @@ form.addEventListener('submit', (e) => {
     const gardens = Object.keys(getGardens());
     if (gardens.includes(gardenName)) {
         errorMessage.textContent = 'Name taken';
+        errorMessage.classList.remove('swing');
+        void errorMessage.offsetWidth;
         errorMessage.classList.add('swing');
         return false;
     }
