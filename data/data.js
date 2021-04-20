@@ -89,7 +89,7 @@ export const plants = {
     },
     "ocimum-basilicum": {
       "slug": "ocimum-basilicum",
-      "commonName": "Sweet basil",
+      "commonName": "Basil",
       "familyName": "Mint family",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Basil-Basilico-Ocimum_basilicum-albahaca.jpg/100px-Basil-Basilico-Ocimum_basilicum-albahaca.jpg",
       "nativeDistributions": [
@@ -274,7 +274,7 @@ export const plants = {
     },
     "vaccinium-corymbosum": {
       "slug": "vaccinium-corymbosum",
-      "commonName": "Highbush blueberry",
+      "commonName": "Blueberry",
       "familyName": "Heath family",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Vaccinium_corymbosum%2801%29.jpg/92px-Vaccinium_corymbosum%2801%29.jpg",
       "nativeDistributions": [
@@ -332,7 +332,7 @@ export const plants = {
     },
     "solanum-tuberosum": {
       "slug": "solanum-tuberosum",
-      "commonName": "Irish potato",
+      "commonName": "Potato",
       "familyName": "Potato family",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Patates.jpg/100px-Patates.jpg",
       "nativeDistributions": [
@@ -374,7 +374,7 @@ export const plants = {
     },
     "capsicum-annuum": {
       "slug": "capsicum-annuum",
-      "commonName": "Cayenne pepper",
+      "commonName": "Pepper",
       "familyName": "Potato family",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Capsicum_annuum_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-027.jpg/81px-Capsicum_annuum_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-027.jpg",
       "nativeDistributions": [
@@ -400,14 +400,14 @@ export const plants = {
       "light": null,
       "humidity": null,
       "minRootDepth": null,
-      "flowerColor": "#FDFBF",
+      "flowerColor": "#FDFBF2",
       "bestMonthToPlant": 5,
       "minDaysTillHarvest": 100,
       "maxDaysTillHarvest": 200
     },
     "cucurbita-pepo": {
       "slug": "cucurbita-pepo",
-      "commonName": "Bitter bottle gourd",
+      "commonName": "Squash",
       "familyName": "Cucumber family",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Cucurbita_pepo_collage_1.png/100px-Cucurbita_pepo_collage_1.png",
       "nativeDistributions": [
@@ -431,7 +431,7 @@ export const plants = {
       "light": null,
       "humidity": null,
       "minRootDepth": null,
-      "flowerColor": "#FFFFF",
+      "flowerColor": "#FFFFF2",
       "minPH": 6.0,
       "maxPH": 6.8,
       "bestMonthToPlant": 5,
@@ -440,7 +440,7 @@ export const plants = {
     },
     "daucus-carota": {
       "slug": "daucus-carota",
-      "commonName": "Queen anne's lace",
+      "commonName": "Carrot",
       "familyName": "Carrot family",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Daucus_carota_May_2008-1_edit.jpg/100px-Daucus_carota_May_2008-1_edit.jpg",
       "nativeDistributions": [
@@ -527,7 +527,7 @@ export const plants = {
       "light": 8,
       "humidity": 5,
       "minRootDepth": null,
-      "flowerColor": "#F5F1EB",
+      "flowerColor": "#F2FDD5",
       "minPH": 6.0,
       "maxPH": 6.5,
       "bestMonthToPlant": 4,
@@ -627,7 +627,7 @@ export const plants = {
       "light": 8,
       "humidity": 5,
       "minRootDepth": null,
-      "flowerColor": "#EA72F",
+      "flowerColor": "#EA72FA",
       "minPH": 6.0,
       "maxPH": 7.0,
       "bestMonthToPlant": 5,
@@ -673,7 +673,7 @@ export const plants = {
     },
     "allium-fistulosum": {
       "slug": "allium-fistulosum",
-      "commonName": "Welsh onion",
+      "commonName": "Onion",
       "familyName": null,
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Batun.jpg/100px-Batun.jpg",
       "nativeDistributions": [
@@ -696,7 +696,7 @@ export const plants = {
       "light": 9,
       "humidity": 4,
       "minRootDepth": null,
-      "flowerColor": "#FFF1B",
+      "flowerColor": "#FFF1B4",
       "minPH": 6.0,
       "maxPH": 7.0,
       "bestMonthToPlant": 2,
@@ -705,7 +705,7 @@ export const plants = {
     },
     "lactuca-sativa": {
       "slug": "lactuca-sativa",
-      "commonName": "Garden lettuce",
+      "commonName": "Lettuce",
       "familyName": "Aster family",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Iceberg_lettuce_in_SB.jpg/100px-Iceberg_lettuce_in_SB.jpg",
       "nativeDistributions": [
@@ -771,7 +771,7 @@ export const plants = {
     },
     "fragaria-x-ananassa": {
       "slug": "fragaria-x-ananassa",
-      "commonName": "Garden strawberry",
+      "commonName": "Strawberry",
       "familyName": "Rose family",
       "image": "https://en.wikipedia.org/wiki/Strawberry#/media/File:Garden_strawberry_(Fragaria_%C3%97_ananassa)_single.jpg",
       "nativeDistributions": null,
