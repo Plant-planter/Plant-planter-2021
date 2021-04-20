@@ -18,8 +18,8 @@ body {
     --gutter: 30px;
     --footer-height: 25px;
     
-    font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    font-family: 'Cabin', sans-serif;
+    background-color: #82B8A1;
 }
 
 main {
@@ -47,8 +47,9 @@ section {
 
 header {
     display: flex;
-    justify-content: center;
-    background-color: var(--color3);
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #C9D9CB;
     height: var(--header-height);
     box-shadow: var(--shadow);
 }
@@ -63,6 +64,11 @@ footer {
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
+    color: #728074;
+}
+
+.logo-type {
+    font-weight: normal;
 }
 
 .gutter-right {
