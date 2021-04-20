@@ -1,5 +1,6 @@
 import { renderHeaderNav } from '../dom-utils.js';
-import { getCurrentGarden, getSpecificGarden, setGarden } from '../local-storage-utilities.js';
+import { getCurrentGarden, getSpecificGarden, setGarden, getGardens } from '../local-storage-utilities.js';
+import { checkDuplicateName } from '../utils.js';
 
 renderHeaderNav();
 
@@ -18,6 +19,12 @@ form.addEventListener('submit', (e) => {
     const formInput = formData.get('garden-name');
     const formSelect = formData.get('location-select');
     const formRadio = formData.get('avatar');
+    const gardens = Object.keys(getGardens());
+    if (gardens.includes(gardenName) && formInput !== gardenName) {
+        checkDuplicateName(gardenName);
+        return false;
+    }
+
 
     gardenObj.avatar = `../assets/${formRadio}`;
     gardenObj.location = formSelect;

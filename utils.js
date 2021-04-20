@@ -31,3 +31,11 @@ export function phToColor(phMin, phMax) {
     return phColors[phInt - 4]; 
     */
 } 
+
+export function checkDuplicateName() {
+    const errorMessage = document.querySelector('.error-message');
+    errorMessage.textContent = 'Name taken';
+    errorMessage.classList.remove('swing');
+    void errorMessage.offsetWidth;
+    errorMessage.classList.add('swing');
+} 
