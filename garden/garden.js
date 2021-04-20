@@ -6,6 +6,7 @@ import { plants } from '../data/data.js';
 // grab html elements
 const section = document.querySelector('.garden-grid');
 const plantSelector = document.getElementById('plant-selector');
+const printButton = document.querySelector('.print-button');
 
 // set up state
 const gardenName = getCurrentGarden();
@@ -67,6 +68,9 @@ plantSelector.addEventListener('change', () => {
     selectedPlant = plantSelector.value;
 });
 
+printButton.addEventListener('click', () => {
+    window.print();
+});
 // initialize page 
 renderHeaderNav();
 generateGardenGrid();
