@@ -34,10 +34,10 @@ export function getSpecificGarden(gardenName) {
     return gardens[gardenName];
 }
 
-export function createGarden(name, avatar = '') {
+export function createGarden(name) {
     const value = {
         name: name,
-        avatar: avatar,
+        avatar: '../assets/chicken.png',
         location: 'Portland',
         rows: generateGrid(5)
     };
