@@ -25,9 +25,11 @@ for (let row of gardenData.rows) {
         const plantId = box.plant;
         if (plantId) {
             const plant = plants[plantId];
-            names.push(plant.commonName);
-            minHarvest.push(plant.minDaysTillHarvest);
-            maxHarvest.push(plant.maxDaysTillHarvest);
+            if (!names.includes(plant.commonName)) {
+                names.push(plant.commonName);
+                minHarvest.push(plant.minDaysTillHarvest);
+                maxHarvest.push(plant.maxDaysTillHarvest);
+            }
         }
     }
 }
@@ -48,15 +50,17 @@ var harvestChart = new Chart(ctx, { //eslint-disable-line
             {
                 label: 'Maximum days til harvest',
                 data: maxHarvest,
-                backgroundColor: 'lightblue',
-                borderColor: 'blue',
+                backgroundColor: 'lightgreen',
+                borderColor: 'green',
                 borderWidth: 1
             }
         ]
     },
     options: {
+        indexAxis: 'y',
         scales: {
             y: {
+                stacked: true,
                 beginAtZero: true
             }
         }
