@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/setup.css">
     <title>Garden Setup | Plant Planter</title>
     <script type="module" src="./setup.js" defer></script>
 </head>
@@ -23,11 +24,23 @@
             <label><select name="location-select">
                     <option>Portland</option>
                 </select></label>
-            <div name="radio-avatar">
-                <label><input type="radio" name="avatar" value="chicken.png"></label>
-                <label><input type="radio" name="avatar" value="cow.png"></label>
-                <label><input type="radio" name="avatar" value="pig.png"></label>
-                <label><input type="radio" name="avatar" value="rabbit.png"></label>
+            <div name="radio-avatar" class="radio-avatar">
+                <label>
+                    <input type="radio" name="avatar" value="chicken.png" required>
+                    <img src="../assets/chicken.png" />
+                </label>
+                <label>
+                    <input type="radio" name="avatar" value="cow.png" required>
+                    <img src="../assets/cow.png" />
+                </label>
+                <label>
+                    <input type="radio" name="avatar" value="pig.png" required>
+                    <img src="../assets/pig.png" />
+                </label>
+                <label>
+                    <input type="radio" name="avatar" value="rabbit.png" required>
+                    <img src="../assets/rabbit.png" />
+                </label>
             </div>
 
             <button>Create Garden</button>
