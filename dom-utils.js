@@ -15,3 +15,4 @@ export function renderGarden(gardenObject) {
     div.append(avatar, anchor, delButton);
     return div;
 }
+
