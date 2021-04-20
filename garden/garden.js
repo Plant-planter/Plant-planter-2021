@@ -14,6 +14,20 @@ let gardenObject = getSpecificGarden(gardenName);
 let selectedPlant = ''; // should contain the slug of the plant
 
 // define functions
+function plantPlant(div, plantSlug) {
+    const plant = plants[plantSlug];
+    div.title = plant.commonName;
+    div.classList.add('filled');
+    div.textContent = '✿';
+    const avgpH = (Number(plant.minPH) + Number(plant.maxPH)) / 2
+    div.style.color = plant.flowerColor;
+
+    // will remove this once pH function is implemented:
+    const bgColors = ['#ffadad', '#ffd6a5', '#fdffb6', '#caffbf', '#9bf6ff', '#a0c4ff', '#bdb2ff', '#ffc6ff', '#fffffc'];
+    div.style.backgroundColor = bgColors[Math.floor(Math.random() * bgColors.length)];
+}
+
+
 function generateGardenGrid() {
     let countRow = 0;
     for (let row of gardenObject.rows){
@@ -25,7 +39,7 @@ function generateGardenGrid() {
 
             // if the box was already filled with a plant, load that
             if (box.plant) {
-                div.textContent = plants[box.plant].commonName;
+                plantPlant(div, box.plant);
             } else {
                 div.textContent = `Box ${countRow} - ${countCol}`;
             }
@@ -34,15 +48,14 @@ function generateGardenGrid() {
             const nRow = countRow - 1;
             const nCol = countCol - 1;
             div.addEventListener('click', () => {
-                if (selectedPlant) {
+                if (plantSelector.value) {
                     // update the state
-                    gardenObject.rows[nRow][nCol].plant = selectedPlant;
+                    gardenObject.rows[nRow][nCol].plant = plantSelector.value;
                     setGarden(gardenName, gardenObject);
                     gardenObject = getSpecificGarden(gardenName);
 
                     // update the view
-                    const plant = plants[selectedPlant];
-                    div.textContent = plant.commonName;
+                    plantPlant(div, plantSelector.value);
                 }
             });
 
@@ -63,7 +76,7 @@ function createPlantOptions() {
 }
 
 // add event handlers
-plantSelector.addEventListener('change', () => {
+plantSelector.addEventListener('input', () => {
     selectedPlant = plantSelector.value;
 });
 
