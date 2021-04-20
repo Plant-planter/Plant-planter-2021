@@ -2,6 +2,7 @@
 import { renderHeaderNav } from '../dom-utils.js';
 import { getSpecificGarden, getCurrentGarden, setGarden } from '../local-storage-utilities.js';
 import { plants } from '../data/data.js';
+import { phToColor } from '../utils.js';
 
 // grab html elements
 const section = document.querySelector('.garden-grid');
@@ -22,12 +23,12 @@ function plantPlant(div, plantSlug) {
     div.textContent = '✿';
     const avgpH = (Number(plant.minPH) + Number(plant.maxPH)) / 2;
     div.style.color = plant.flowerColor;
+    div.style.backgroundColor = phToColor(plant.minPH, plant.maxPH);
 
-    // will remove this once pH function is implemented:
+    /*// will remove this once pH function is implemented:
     const bgColors = ['#ffadad', '#ffd6a5', '#fdffb6', '#caffbf', '#9bf6ff', '#a0c4ff', '#bdb2ff', '#ffc6ff', '#fffffc'];
-    div.style.backgroundColor = bgColors[Math.floor(Math.random() * bgColors.length)];
+    div.style.backgroundColor = bgColors[Math.floor(Math.random() * bgColors.length)];*/
 }
-
 
 function generateGardenGrid() {
     let countRow = 0;
@@ -49,6 +50,7 @@ function generateGardenGrid() {
             const nRow = countRow - 1;
             const nCol = countCol - 1;
             div.addEventListener('click', () => {
+                console.log(plantSelector.value)
                 if (plantSelector.value) {
                     // update the state
                     gardenObject.rows[nRow][nCol].plant = plantSelector.value;
