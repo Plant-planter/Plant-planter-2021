@@ -25,6 +25,7 @@ export function phToColor(phMin, phMax) {
     // const tempHue = (phAverage - 4) / 8; //create a value from 0 to 1
     // const phHue = 80 + (tempHue * (80));
     // console.log(`hsl(${phHue}, 50%, ${lightness}%)`);
-
+    //return `hsl(${((phAverage - 4)/7) * 115 + 25}, 50%, 75%)`;
+    
     return phColors[phInt - 4]; 
 } 
