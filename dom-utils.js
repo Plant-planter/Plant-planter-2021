@@ -51,7 +51,7 @@ export function renderGarden(gardenObject) {
         setCurrentGarden(gardenObject.name);
         console.log('Here is ' + gardenObject.name);
     });
-
+    div.classList.add('garden-slot');
     div.append(avatar, anchor, delButton);
     return div;
 }
