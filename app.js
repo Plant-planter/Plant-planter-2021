@@ -1,7 +1,7 @@
 // import functions and grab DOM elements
 import { getGardens, createGarden, setCurrentGarden } from './local-storage-utilities.js';
 import { renderGarden } from './dom-utils.js';
-import { getAveragePH } from './utils.js'
+import { getAveragePH, phToColor } from './utils.js'
 
 
 const gardenList = document.querySelector('.gardens');
@@ -41,4 +41,4 @@ form.addEventListener('submit', (e) => {
 
 loadGardens();
 
-getAveragePH();
+phToColor();
