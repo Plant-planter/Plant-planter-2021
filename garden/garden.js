@@ -7,6 +7,7 @@ import { phToColor } from '../utils.js';
 // grab html elements
 const section = document.querySelector('.garden-grid');
 const plantSelector = document.getElementById('plant-selector');
+const printButton = document.querySelector('.print-button');
 
 // set up state
 const gardenName = getCurrentGarden();
@@ -20,7 +21,7 @@ function plantPlant(div, plantSlug) {
     div.title = plant.commonName;
     div.classList.add('filled');
     div.textContent = '✿';
-    const avgpH = (Number(plant.minPH) + Number(plant.maxPH)) / 2
+    const avgpH = (Number(plant.minPH) + Number(plant.maxPH)) / 2;
     div.style.color = plant.flowerColor;
     div.style.backgroundColor = phToColor(plant.minPH, plant.maxPH);
 
@@ -82,6 +83,9 @@ plantSelector.addEventListener('input', () => {
     selectedPlant = plantSelector.value;
 });
 
+printButton.addEventListener('click', () => {
+    window.print();
+});
 // initialize page 
 renderHeaderNav();
 generateGardenGrid();
