@@ -18,10 +18,9 @@ let selectedPlant = ''; // should contain the slug of the plant
 // define functions
 function plantPlant(div, plantSlug) {
     const plant = plants[plantSlug];
-    div.title = plant.commonName;
+    div.title = plant.commonName + '\npH: ' + ((plant.minPH + plant.maxPH) / 2).toFixed(1);
     div.classList.add('filled');
     div.textContent = '✿';
-    const avgpH = (Number(plant.minPH) + Number(plant.maxPH)) / 2;
     div.style.color = plant.flowerColor;
     div.style.backgroundColor = phToColor(plant.minPH, plant.maxPH);
 

@@ -14,8 +14,9 @@
 
 .garden-grid > div:hover {
     cursor: pointer;
+    border-width: 3px;
 }
 
 .garden-grid .filled {
-    font-size: 2rem;
+    font-size: 4rem;
 }
