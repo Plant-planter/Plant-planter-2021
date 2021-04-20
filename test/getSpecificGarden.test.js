@@ -18,7 +18,7 @@ const stubGardens = {
 };
 
 
-test('time to test a function', (expect) => {
+test('should return a specific garden', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const stringifyGarden = JSON.stringify(stubGardens);
