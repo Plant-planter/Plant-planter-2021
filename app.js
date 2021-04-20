@@ -5,6 +5,7 @@ import { renderGarden } from './dom-utils.js';
 
 const gardenList = document.querySelector('.gardens');
 const form = document.querySelector('form');
+const errorMessage = document.querySelector('.error-message');
 
 // initialize state
 function loadGardens() {
@@ -25,7 +26,8 @@ form.addEventListener('submit', (e) => {
     const gardenName = formData.get('garden-name');
     const gardens = Object.keys(getGardens());
     if (gardens.includes(gardenName)) {
-        console.log('Name Taken');
+        errorMessage.textContent = 'Name taken';
+        errorMessage.classList.add('swing');
         return false;
     }
 
