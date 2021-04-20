@@ -1,4 +1,32 @@
-import { getGardens, setGarden, setGardens } from './local-storage-utilities.js';
+import { getGardens, setGardens } from './local-storage-utilities.js';
+
+export function renderHeaderNav(pages = ['/about/', '/chart/', '/garden/', '/setup/']) {
+    const header = document.querySelector('body > header');
+    const nav = document.createElement('nav');
+    const currentPage = window.location.pathname;
+
+    // if you're not on the homepage add a "home" link
+    if (currentPage !== '/') {
+        const anchor = document.createElement('a');
+        anchor.href = '../';
+        anchor.textContent = 'home';
+        nav.appendChild(anchor);
+    }
+
+    // loop through the list of pages and add them if they're not the current page
+    for (let page of pages) {
+        if (page !== currentPage) {
+            const anchor = document.createElement('a');
+            anchor.href = page;
+            anchor.textContent = page.substring(1, page.length - 1);
+            nav.appendChild(anchor);
+        }
+    }
+
+    // style and add the nav to the header
+    nav.classList.add('header-nav');
+    header.appendChild(nav);
+}
 
 export function renderGarden(gardenObject) {
     const div = document.createElement('div');
