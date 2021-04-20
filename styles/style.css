@@ -67,6 +67,20 @@ h2 {
     color: #728074;
 }
 
+input, button {
+    font-family: 'Cabin', sans-serif;
+    background-color: #C9D9CB;
+    outline: none;
+    border: none;
+    height: 2rem;
+    font-size: 18px;
+    color: #728074;
+}
+
+
+}
+}
+
 .logo-type {
     font-weight: normal;
 }
