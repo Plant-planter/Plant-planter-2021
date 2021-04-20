@@ -10,14 +10,13 @@
     width: 7rem;
     height: 7rem;
     text-align: center;
-    opacity: 0.9;
 }
 
 .garden-grid > div:hover {
     cursor: pointer;
-    opacity: 1;
+    border-width: 3px;
 }
 
 .garden-grid .filled {
-    font-size: 2rem;
+    font-size: 4rem;
 }
