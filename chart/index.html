@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/home.css">
     <title>Chart | Plant Planter</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
     <script type="module" src="./chart.js" defer></script>
 </head>
 
@@ -22,9 +23,10 @@
     <main>
         <section>
             <div>
-                <canvas></canvas>
-            </div>>
+                <canvas id="harvestChart" width="400" height="400"></canvas>
+            </div>
         </section>
+        <button class="print-button">Print Your Chart</button>
     </main>
 </body>
 
