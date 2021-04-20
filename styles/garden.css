@@ -20,3 +20,19 @@
 .garden-grid .filled {
     font-size: 4rem;
 }
+
+.ph-chart {
+    width: 10rem;
+    height: 30rem;
+    border: 1px solid black;
+    background: linear-gradient(hsl(0, 50%, 75%), hsl(60, 50%, 75%), hsl(120, 50%, 75%), hsl(180, 50%, 75%), hsl(240, 50%, 75%), hsl(300, 50%, 75%), hsl(360, 50%, 75%));
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+main > * {
+    margin: 1rem;
+}
