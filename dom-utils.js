@@ -1,4 +1,4 @@
-import { getGardens, setGardens } from './local-storage-utilities.js';
+import { getGardens, setGardens, setCurrentGarden } from './local-storage-utilities.js';
 
 export function renderHeaderNav(pages = ['/garden/', '/chart/', '/setup/', '/about/']) {
     const header = document.querySelector('body > header');
@@ -45,6 +45,11 @@ export function renderGarden(gardenObject) {
         delete gardens[gardenObject.name];
         setGardens(gardens);
         location.reload();
+    });
+
+    anchor.addEventListener('click', () => {
+        setCurrentGarden(gardenObject.name);
+        console.log('Here is ' + gardenObject.name);
     });
 
     div.append(avatar, anchor, delButton);

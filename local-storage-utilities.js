@@ -52,6 +52,5 @@ export function setCurrentGarden(gardenName) {
 
 export function getCurrentGarden() {
     return localStorage.getItem(CURRENTGARDEN);
-
 }
 
