@@ -24,6 +24,10 @@ export function setGarden(name, garden) {
     localStorage.setItem(GARDENS, stringyGardens);
 }
 
+export function setGardens(gardens) {
+    localStorage.setItem(GARDENS, JSON.stringify(gardens));
+}
+
 export function getSpecificGarden(gardenName) {
     const gardens = getGardens();
 

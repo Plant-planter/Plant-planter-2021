@@ -10,8 +10,6 @@ const form = document.querySelector('form');
 function loadGardens() {
     const gardens = getGardens();
 
-    console.log(gardens);
-
     // render the gardens and add them to page
     for (let garden of Object.values(gardens)) {
         const gardenDiv = renderGarden(garden);
