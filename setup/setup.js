@@ -1,4 +1,7 @@
+import { renderHeaderNav } from '../dom-utils.js';
 import { getCurrentGarden, getSpecificGarden, setGarden } from '../local-storage-utilities.js';
+
+renderHeaderNav();
 
 const gardenName = getCurrentGarden();
 const gardenObj = getSpecificGarden(gardenName);
