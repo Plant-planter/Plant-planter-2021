@@ -21,7 +21,6 @@ function plantPlant(div, plantSlug) {
     div.title = plant.commonName + '\npH: ' + ((plant.minPH + plant.maxPH) / 2).toFixed(1);
     div.classList.add('filled');
     div.textContent = '✿';
-    console.log(plant.commonName, plant.flowerColor);
     div.style.color = plant.flowerColor;
     div.style.backgroundColor = phToColor(plant.minPH, plant.maxPH);
 
