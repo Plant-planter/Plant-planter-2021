@@ -2,7 +2,6 @@
 import { getGardens, createGarden, setCurrentGarden } from './local-storage-utilities.js';
 import { renderGarden } from './dom-utils.js';
 
-
 const gardenList = document.querySelector('.gardens');
 const form = document.querySelector('form');
 const errorMessage = document.querySelector('.error-message');
@@ -39,4 +38,3 @@ form.addEventListener('submit', (e) => {
 });
 
 loadGardens();
-

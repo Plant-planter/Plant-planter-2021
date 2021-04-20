@@ -1,13 +1,21 @@
-.garden-grid{
+.garden-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     width: 35rem;
     grid-gap: 0.2rem;
 }
 
-.garden-grid > div{
+.garden-grid > div {
     border: 1px solid black;
     width: 7rem;
     height: 7rem;
     text-align: center;
+}
+
+.garden-grid > div:hover {
+    cursor: pointer;
+}
+
+.garden-grid .filled {
+    font-size: 2rem;
 }

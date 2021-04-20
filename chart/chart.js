@@ -4,6 +4,11 @@ import { getCurrentGarden, getSpecificGarden } from '../local-storage-utilities.
 
 renderHeaderNav();
 
+const printButton = document.querySelector('.print-button');
+
+printButton.addEventListener('click', () => {
+    window.print();
+});
 
 
 const gardenData = getSpecificGarden(getCurrentGarden());
