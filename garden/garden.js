@@ -31,8 +31,8 @@ function generateGardenGrid() {
             }
 
             // add event listener for when box is clicked on
-            const nRow = countRow - 1
-            const nCol = countCol - 1
+            const nRow = countRow - 1;
+            const nCol = countCol - 1;
             div.addEventListener('click', () => {
                 if (selectedPlant) {
                     // update the state
