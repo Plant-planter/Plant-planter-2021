@@ -1,10 +1,11 @@
 import { renderHeaderNav } from '../dom-utils.js';
-import { getCurrentGarden, getSpecificGarden, setGarden } from '../local-storage-utilities.js';
+import { getCurrentGarden, getSpecificGarden, setGarden, getGardens } from '../local-storage-utilities.js';
 
 renderHeaderNav();
 
 const gardenName = getCurrentGarden();
 const gardenObj = getSpecificGarden(gardenName);
+const setupError = document.querySelector('.setup-error');
 
 const form = document.querySelector('form');
 
@@ -18,6 +19,17 @@ form.addEventListener('submit', (e) => {
     const formInput = formData.get('garden-name');
     const formSelect = formData.get('location-select');
     const formRadio = formData.get('avatar');
+
+    const gardens = Object.keys(getGardens());
+    if (gardens.includes(gardenName)) {
+        setupError.textContent = 'Name taken';
+        setupError.classList.remove('swing');
+        void setupError.offsetWidth;
+        setupError.classList.add('swing');
+        return false;
+    }
+
+
 
     gardenObj.avatar = `../assets/${formRadio}`;
     gardenObj.location = formSelect;
