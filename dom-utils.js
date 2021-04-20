@@ -1,6 +1,6 @@
 import { getGardens, setGardens } from './local-storage-utilities.js';
 
-export function renderHeaderNav(pages = ['/about/', '/chart/', '/garden/', '/setup/']) {
+export function renderHeaderNav(pages = ['/garden/', '/chart/', '/setup/', '/about/']) {
     const header = document.querySelector('body > header');
     const nav = document.createElement('nav');
     const currentPage = window.location.pathname;
