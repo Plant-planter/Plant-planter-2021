@@ -67,8 +67,8 @@ test('should return a specific garden', (expect) => {
 test('should return the appropriate hsl color', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const phAverage = 4.75
-    const expected = `hsl(${((phAverage - 4)/8) * 360}, 50%, 75%)`;
+    const phAverage = 4.75;
+    const expected = `hsl(${((phAverage - 4) / 8) * 360}, 50%, 75%)`;
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = phToColor(4.5, 5);

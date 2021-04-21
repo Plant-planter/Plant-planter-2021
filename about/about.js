@@ -1,3 +1,3 @@
-import { renderHeaderNav } from "../dom-utils.js";
+import { renderHeaderNav } from '../dom-utils.js';
 
 renderHeaderNav();
