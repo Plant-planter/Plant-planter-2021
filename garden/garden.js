@@ -49,7 +49,6 @@ function generateGardenGrid() {
             const nRow = countRow - 1;
             const nCol = countCol - 1;
             div.addEventListener('click', () => {
-                console.log(plantSelector.value)
                 if (plantSelector.value) {
                     // update the state
                     gardenObject.rows[nRow][nCol].plant = plantSelector.value;
@@ -68,7 +67,6 @@ function generateGardenGrid() {
 }
 
 function createPlantOptions() {
-    console.log(plants);
     for (let plant of Object.values(plants)) {
         const option = document.createElement('option');
         option.value = plant.slug;
