@@ -5,7 +5,7 @@ export const plants = {
       "slug": "zea-mays",
       "commonName": "Corn",
       "familyName": "Grass family",
-      "image": "https://openmoji.org/data/color/svg/1F33D.svg",
+      "image": "../assets/corn.svg",
       "nativeDistributions": [
         "Guatemala",
         "Mexico Central",
@@ -34,7 +34,7 @@ export const plants = {
       "slug": "solanum-lycopersicum",
       "commonName": "Garden tomato",
       "familyName": "Potato family",
-      "image": "https://openmoji.org/data/color/svg/1F345.svg",
+      "image": "../assets/tomato.svg",
       "nativeDistributions": [
         "Peru"
       ],
@@ -61,7 +61,7 @@ export const plants = {
       "slug": "brassica-oleracea",
       "commonName": "Cabbage",
       "familyName": "Mustard family",
-      "image": "https://openmoji.org/data/color/svg/1F96C.svg",
+      "image": "../assets/cabbage.svg",
       "nativeDistributions": [
         "China North-Central",
         "France",
@@ -91,7 +91,7 @@ export const plants = {
       "slug": "ocimum-basilicum",
       "commonName": "Basil",
       "familyName": "Mint family",
-      "image": "https://openmoji.org/data/color/svg/1F33F.svg",
+      "image": "../assets/basil.svg",
       "nativeDistributions": [
         "Andaman Is.",
         "Assam",
@@ -148,7 +148,7 @@ export const plants = {
       "slug": "origanum-vulgare",
       "commonName": "Oregano",
       "familyName": "Mint family",
-      "image": "https://openmoji.org/data/color/svg/1F33F.svg",
+      "image": "../assets/Oregano.svg",
       "nativeDistributions": [
         "Afghanistan",
         "Albania",
@@ -249,7 +249,7 @@ export const plants = {
       "slug": "calendula-officinalis",
       "commonName": "Pot marigold",
       "familyName": "Aster family",
-      "image": "https://openmoji.org/data/color/svg/1F33B.svg",
+      "image": "../assets/marigold.svg",
       "nativeDistributions": [
         "Spain"
       ],
@@ -276,7 +276,7 @@ export const plants = {
       "slug": "vaccinium-corymbosum",
       "commonName": "Blueberry",
       "familyName": "Heath family",
-      "image": "https://openmoji.org/data/color/svg/1FAD0.svg",
+      "image": "../assets/blueberry.svg",
       "nativeDistributions": [
         "Alabama",
         "Connecticut",
@@ -334,7 +334,7 @@ export const plants = {
       "slug": "solanum-tuberosum",
       "commonName": "Potato",
       "familyName": "Potato family",
-      "image": "https://openmoji.org/data/color/svg/1F954.svg",
+      "image": "../assets/potato.svg",
       "nativeDistributions": [
         "Argentina Northwest",
         "Argentina South",
@@ -376,7 +376,7 @@ export const plants = {
       "slug": "capsicum-annuum",
       "commonName": "Pepper",
       "familyName": "Potato family",
-      "image": "https://openmoji.org/data/color/svg/1F336.svg",
+      "image": "../assets/pepper.svg",
       "nativeDistributions": [
         "Guatemala",
         "Mexico Central",
@@ -442,7 +442,7 @@ export const plants = {
       "slug": "daucus-carota",
       "commonName": "Carrot",
       "familyName": "Carrot family",
-      "image": "https://openmoji.org/data/color/svg/1F955.svg",
+      "image": "../assets/carrot.svg",
       "nativeDistributions": [
         "Afghanistan",
         "Albania",
@@ -595,7 +595,7 @@ export const plants = {
       "slug": "phaseolus-vulgaris",
       "commonName": "Kidney bean",
       "familyName": "Pea family",
-      "image": "https://openmoji.org/data/color/svg/1F331.svg",
+      "image": "../assets/kidney-bean.svg",
       "nativeDistributions": [
         "Costa Rica",
         "Guatemala",
@@ -638,7 +638,7 @@ export const plants = {
       "slug": "cucumis-sativus",
       "commonName": "Garden cucumber",
       "familyName": "Cucumber family",
-      "image": "https://openmoji.org/data/color/svg/1F952.svg",
+      "image": "../assets/cucumber.svg",
       "nativeDistributions": [
         "Assam",
         "Bangladesh",
@@ -675,7 +675,7 @@ export const plants = {
       "slug": "allium-fistulosum",
       "commonName": "Onion",
       "familyName": null,
-      "image": "https://openmoji.org/data/color/svg/1F9C5.svg",
+      "image": "../assets/onion.svg",
       "nativeDistributions": [
         "China North-Central",
         "China South-Central"
@@ -707,7 +707,7 @@ export const plants = {
       "slug": "lactuca-sativa",
       "commonName": "Lettuce",
       "familyName": "Aster family",
-      "image": "https://openmoji.org/data/color/svg/1F96C.svg",
+      "image": "../assets/lettuce.svg",
       "nativeDistributions": [
         "Iraq"
       ],
@@ -738,7 +738,7 @@ export const plants = {
       "slug": "spinacia-oleracea",
       "commonName": "Spinach",
       "familyName": "Amaranth family",
-      "image": "https://openmoji.org/data/color/svg/2618.svg",
+      "image": "../assets/spinach.svg",
       "nativeDistributions": [
         "Altay",
         "Kazakhstan",
@@ -773,7 +773,7 @@ export const plants = {
       "slug": "fragaria-x-ananassa",
       "commonName": "Strawberry",
       "familyName": "Rose family",
-      "image": "https://openmoji.org/data/color/svg/1F353.svg",
+      "image": "../assets/strawberry.svg",
       "nativeDistributions": null,
       "duration": null,
       "edibleParts": null,
