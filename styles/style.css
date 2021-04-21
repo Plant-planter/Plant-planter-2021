@@ -67,6 +67,12 @@ h2 {
     color: #728074;
 }
 
+a {
+    color:antiquewhite;
+    text-shadow: 1px 1px 1px burlywood;
+    text-decoration: none;
+}
+
 input, button {
     font-family: 'Cabin', sans-serif;
     background-color: #C9D9CB;
@@ -77,9 +83,6 @@ input, button {
     color: #728074;
 }
 
-
-}
-}
 
 .logo-type {
     font-weight: normal;
