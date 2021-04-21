@@ -17,7 +17,7 @@ export function renderHeaderNav(pages = ['/garden/', '/chart/', '/setup/', '/abo
     for (let page of pages) {
         if (page !== currentPage) {
             const anchor = document.createElement('a');
-            anchor.href = page;
+            anchor.href = `..${page}`;
             anchor.textContent = page.substring(1, page.length - 1);
             nav.appendChild(anchor);
         }
