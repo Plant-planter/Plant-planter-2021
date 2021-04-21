@@ -249,7 +249,7 @@ export const plants = {
       "slug": "calendula-officinalis",
       "commonName": "Pot marigold",
       "familyName": "Aster family",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Pot_marigold.jpg/100px-Pot_marigold.jpg",
+      "image": "https://openmoji.org/data/color/svg/1F33B.svg",
       "nativeDistributions": [
         "Spain"
       ],
@@ -538,7 +538,7 @@ export const plants = {
       "slug": "pisum-sativum",
       "commonName": "Garden pea",
       "familyName": "Pea family",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Peas_in_pods_-_Studio.jpg/100px-Peas_in_pods_-_Studio.jpg",
+      "image": "https://openmoji.org/data/color/svg/1F95D.svg",
       "nativeDistributions": [
         "Afghanistan",
         "Albania",
@@ -595,7 +595,7 @@ export const plants = {
       "slug": "phaseolus-vulgaris",
       "commonName": "Kidney bean",
       "familyName": "Pea family",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Snijboon_peulen_Phaseolus_vulgaris.jpg/75px-Snijboon_peulen_Phaseolus_vulgaris.jpg",
+      "image": "https://openmoji.org/data/color/svg/1F331.svg",
       "nativeDistributions": [
         "Costa Rica",
         "Guatemala",
@@ -738,7 +738,7 @@ export const plants = {
       "slug": "spinacia-oleracea",
       "commonName": "Spinach",
       "familyName": "Amaranth family",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Spinacia_oleracea_Spinazie_bloeiend.jpg/77px-Spinacia_oleracea_Spinazie_bloeiend.jpg",
+      "image": "https://openmoji.org/data/color/svg/2618.svg",
       "nativeDistributions": [
         "Altay",
         "Kazakhstan",
