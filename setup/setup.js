@@ -26,7 +26,7 @@ form.addEventListener('submit', (e) => {
     }
 
 
-    gardenObj.avatar = `../assets/${formRadio}`;
+    gardenObj.avatar = `./assets/${formRadio}`;
     gardenObj.location = formSelect;
 
     setGarden(formInput, gardenObj);
