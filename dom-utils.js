@@ -5,19 +5,21 @@ export function renderHeaderNav(pages = ['/garden/', '/chart/', '/setup/', '/abo
     const nav = document.createElement('nav');
     const currentPage = window.location.pathname;
 
+    let prefix = '.';
     // if you're not on the homepage add a "home" link
     if (currentPage !== '/') {
         const anchor = document.createElement('a');
         anchor.href = '../';
         anchor.textContent = 'home';
         nav.appendChild(anchor);
+        prefix = '..'
     }
 
     // loop through the list of pages and add them if they're not the current page
     for (let page of pages) {
         if (page !== currentPage) {
             const anchor = document.createElement('a');
-            anchor.href = `..${page}`;
+            anchor.href = prefix + page;
             anchor.textContent = page.substring(1, page.length - 1);
             nav.appendChild(anchor);
         }
