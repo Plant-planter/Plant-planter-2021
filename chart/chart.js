@@ -105,7 +105,14 @@ function loadTypeChart() {
                 {
                     label: 'Type',
                     data: Object.values(habits),
-                    backgroundColor: [],
+                    backgroundColor: [
+                        '#AAD6E1',
+                        '#FDFAE5',
+                        '#D1E9EF',
+                        '#FFE9E8',
+                        '#758F9E',
+                        '#E0DDC7'
+                    ],
                     borderColor: 'green',
                     borderWidth: 1
                 }
