@@ -29,6 +29,10 @@
     transition:all 0.3s ease;
 }
 
+button {
+    margin-left: 10px;
+}
+
 @-webkit-keyframes swing
 {
     15%
