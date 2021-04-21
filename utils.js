@@ -15,7 +15,7 @@ export function phToColor(phMin, phMax) {
     return `hsl(${((phAverage - 4) / 8) * 360}, 50%, 75%)`;
 } 
 
-export function checkDuplicateName() {
+export function warnDuplicateName() {
     const errorMessage = document.querySelector('.error-message');
     errorMessage.textContent = 'Name taken';
     errorMessage.classList.remove('swing');
