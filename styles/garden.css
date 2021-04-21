@@ -86,3 +86,7 @@ select {
 .title-container {
     margin-top: 1rem;
 }
+
+img {
+    width: 3rem;
+}
