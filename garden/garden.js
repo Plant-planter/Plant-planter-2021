@@ -24,17 +24,28 @@ gardenTitle.textContent = '' + gardenName.charAt(0).toUpperCase() + gardenName.s
 function plantPlant(div, plantSlug) {
     const plant = plants[plantSlug];
     const image = document.createElement('img');
+    const deleteButton = document.createElement('button');
     div.title = plant.commonName + '\npH: ' + ((plant.minPH + plant.maxPH) / 2).toFixed(1);
     div.classList.add('filled');
     image.src = plant.image;
     div.innerHTML = '';
     div.appendChild(image);
     div.style.backgroundColor = phToColor(plant.minPH, plant.maxPH);
+    deleteButton.textContent = 'X';
+    deleteButton.addEventListener('click', () => {
+        plantSelector.value = null;
+        div.style.backgroundColor = 'transparent';
+        div.innerHTML = '';
+        //edit state ie. remove this from local storagee
+    });
+    deleteButton.classList.add('delete-button');
+    div.appendChild(deleteButton);
 }
+
 
 function generateGardenGrid() {
     let countRow = 0;
-    for (let row of gardenObject.rows){
+    for (let row of gardenObject.rows) {
         countRow++;
         let countCol = 0;
         for (let box of row) {  //each row is an array, each box an object
@@ -44,8 +55,6 @@ function generateGardenGrid() {
             // if the box was already filled with a plant, load that
             if (box.plant) {
                 plantPlant(div, box.plant);
-            } else {
-                div.textContent = `Box ${countRow} - ${countCol}`;
             }
 
             // add event listener for when box is clicked on
@@ -62,7 +71,6 @@ function generateGardenGrid() {
                     plantPlant(div, plantSelector.value);
                 }
             });
-
             // append the child
             section.appendChild(div);
         }
@@ -75,7 +83,7 @@ function createPlantOptions() {
         option.value = plant.slug;
         option.textContent = plant.commonName;
         plantSelector.appendChild(option);
-    } 
+    }
 }
 
 printButton.addEventListener('click', () => {

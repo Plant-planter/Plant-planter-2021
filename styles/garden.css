@@ -90,3 +90,15 @@ select {
 img {
     width: 3rem;
 }
+
+.garden-grid > div:hover .delete-button {
+    display: block;
+}
+.delete-button {
+    display: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    background-color: transparent;
+}
