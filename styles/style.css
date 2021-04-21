@@ -73,11 +73,18 @@ a {
     color:antiquewhite;
     text-shadow: 1px 1px 1px burlywood;
     text-decoration: none;
-    background-color: hsla(154, 28%, 62%, 70%);
-    padding: 0.25rem;
-    border-radius: 5px;
+
 }
 
+button {
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 3px 3px 1px rgb(95, 160, 130);
+}
+
+button:hover {
+    background-color: #d8e9da;
+}
 input, button {
     font-family: 'Cabin', sans-serif;
     background-color: #C9D9CB;
@@ -88,8 +95,23 @@ input, button {
     color: #728074;
 }
 
+select {
+    font-family: 'Cabin', sans-serif;
+    background-color: #C9D9CB;
+    color:#728074;
+    border: none;
+    outline: none;
+    height: 2rem;
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 input {
     padding-left: 0.5rem;
+    border-radius: 5px;
 }
 
 .logo-type {
@@ -123,6 +145,16 @@ header img {
     text-decoration: none;
     margin: 0.25rem;
     font-weight: bold;
+    background-color: hsla(154, 28%, 62%, 70%);
+    padding: 0.25rem;
+    border-radius: 5px;
+    text-shadow: none;
+    box-shadow: cadetblue 3px 3px 1px;
+    cursor: pointer;
+}
+
+.header-nav a:hover {
+    background-color: rgba(109, 153, 134, 0.7);
 }
 
 p {

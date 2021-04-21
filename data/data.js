@@ -409,7 +409,7 @@ export const plants = {
       "slug": "cucurbita-pepo",
       "commonName": "Squash",
       "familyName": "Cucumber family",
-      "image": "",
+      "image": "../assets/squash.svg",
       "nativeDistributions": [
         "Mexico Central",
         "Mexico Gulf",
@@ -538,7 +538,7 @@ export const plants = {
       "slug": "pisum-sativum",
       "commonName": "Garden pea",
       "familyName": "Pea family",
-      "image": "https://openmoji.org/data/color/svg/1F95D.svg",
+      "image": "../assets/pea.svg",
       "nativeDistributions": [
         "Afghanistan",
         "Albania",
