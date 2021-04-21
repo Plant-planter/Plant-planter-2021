@@ -32,7 +32,7 @@ function loadHarvestChart() {
     }
     
     // make the chart
-    let harvestChart = new Chart(ctx, {
+    let harvestChart = new Chart(ctx, { //eslint-disable-line
         type: 'bar',
         data: {
             labels: names,
@@ -74,5 +74,48 @@ printButton.addEventListener('click', () => {
     window.print();
 });
 
+
+function loadTypeChart() {
+    const pieTypeChart = document.getElementById('typeChart').getContext('2d');
+    
+    // fill up data arrays
+    const habits = {};
+    
+    for (let row of gardenData.rows) {
+        for (let box of row) {
+            const plantId = box.plant;
+            if (plantId) {
+                const plant = plants[plantId];
+                for (let habit of plant.habits) {
+                    if (habits[habit]) {
+                        habits[habit]++;
+                    } else {
+                        habits[habit] = 1;
+                    }
+                }
+            }
+        }
+    }
+    // make the chart
+    var typeChart = new Chart(pieTypeChart, { //eslint-disable-line
+        type: 'pie',
+        data: {
+            labels: Object.keys(habits),
+            datasets: [
+                {
+                    label: 'Type',
+                    data: Object.values(habits),
+                    backgroundColor: [],
+                    borderColor: 'green',
+                    borderWidth: 1
+                }
+            ]
+        }
+    });
+}
+
 renderHeaderNav();
 loadHarvestChart();
+loadTypeChart();
+
+
