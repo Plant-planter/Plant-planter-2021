@@ -5,7 +5,7 @@ export const plants = {
       "slug": "zea-mays",
       "commonName": "Corn",
       "familyName": "Grass family",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Zea_mays_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-283.jpg/73px-Zea_mays_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-283.jpg",
+      "image": "https://openmoji.org/data/color/svg/1F33D.svg",
       "nativeDistributions": [
         "Guatemala",
         "Mexico Central",
@@ -34,7 +34,7 @@ export const plants = {
       "slug": "solanum-lycopersicum",
       "commonName": "Garden tomato",
       "familyName": "Potato family",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/100px-Tomato_je.jpg",
+      "image": "https://openmoji.org/data/color/svg/1F345.svg",
       "nativeDistributions": [
         "Peru"
       ],
@@ -61,7 +61,7 @@ export const plants = {
       "slug": "brassica-oleracea",
       "commonName": "Cabbage",
       "familyName": "Mustard family",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Brassica_oleracea0.jpg/100px-Brassica_oleracea0.jpg",
+      "image": "https://openmoji.org/data/color/svg/1F96C.svg",
       "nativeDistributions": [
         "China North-Central",
         "France",
@@ -91,7 +91,7 @@ export const plants = {
       "slug": "ocimum-basilicum",
       "commonName": "Basil",
       "familyName": "Mint family",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Basil-Basilico-Ocimum_basilicum-albahaca.jpg/100px-Basil-Basilico-Ocimum_basilicum-albahaca.jpg",
+      "image": "https://openmoji.org/data/color/svg/1F33F.svg",
       "nativeDistributions": [
         "Andaman Is.",
         "Assam",
@@ -148,7 +148,7 @@ export const plants = {
       "slug": "origanum-vulgare",
       "commonName": "Oregano",
       "familyName": "Mint family",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Origanum_vulgare_-_harilik_pune.jpg/66px-Origanum_vulgare_-_harilik_pune.jpg",
+      "image": "https://openmoji.org/data/color/svg/1F33F.svg",
       "nativeDistributions": [
         "Afghanistan",
         "Albania",
@@ -276,7 +276,7 @@ export const plants = {
       "slug": "vaccinium-corymbosum",
       "commonName": "Blueberry",
       "familyName": "Heath family",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Vaccinium_corymbosum%2801%29.jpg/92px-Vaccinium_corymbosum%2801%29.jpg",
+      "image": "https://openmoji.org/data/color/svg/1FAD0.svg",
       "nativeDistributions": [
         "Alabama",
         "Connecticut",
@@ -334,7 +334,7 @@ export const plants = {
       "slug": "solanum-tuberosum",
       "commonName": "Potato",
       "familyName": "Potato family",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Patates.jpg/100px-Patates.jpg",
+      "image": "https://openmoji.org/data/color/svg/1F954.svg",
       "nativeDistributions": [
         "Argentina Northwest",
         "Argentina South",
@@ -376,7 +376,7 @@ export const plants = {
       "slug": "capsicum-annuum",
       "commonName": "Pepper",
       "familyName": "Potato family",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Capsicum_annuum_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-027.jpg/81px-Capsicum_annuum_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-027.jpg",
+      "image": "https://openmoji.org/data/color/svg/1F336.svg",
       "nativeDistributions": [
         "Guatemala",
         "Mexico Central",
@@ -409,7 +409,7 @@ export const plants = {
       "slug": "cucurbita-pepo",
       "commonName": "Squash",
       "familyName": "Cucumber family",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Cucurbita_pepo_collage_1.png/100px-Cucurbita_pepo_collage_1.png",
+      "image": "https://openmoji.org/data/color/svg/1F952.svg",
       "nativeDistributions": [
         "Mexico Central",
         "Mexico Gulf",
@@ -442,7 +442,7 @@ export const plants = {
       "slug": "daucus-carota",
       "commonName": "Carrot",
       "familyName": "Carrot family",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Daucus_carota_May_2008-1_edit.jpg/100px-Daucus_carota_May_2008-1_edit.jpg",
+      "image": "https://openmoji.org/data/color/svg/1F955.svg",
       "nativeDistributions": [
         "Afghanistan",
         "Albania",
@@ -638,7 +638,7 @@ export const plants = {
       "slug": "cucumis-sativus",
       "commonName": "Garden cucumber",
       "familyName": "Cucumber family",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/ARS_cucumber.jpg/70px-ARS_cucumber.jpg",
+      "image": "https://openmoji.org/data/color/svg/1F952.svg",
       "nativeDistributions": [
         "Assam",
         "Bangladesh",
@@ -675,7 +675,7 @@ export const plants = {
       "slug": "allium-fistulosum",
       "commonName": "Onion",
       "familyName": null,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Batun.jpg/100px-Batun.jpg",
+      "image": "https://openmoji.org/data/color/svg/1F9C5.svg",
       "nativeDistributions": [
         "China North-Central",
         "China South-Central"
@@ -707,7 +707,7 @@ export const plants = {
       "slug": "lactuca-sativa",
       "commonName": "Lettuce",
       "familyName": "Aster family",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Iceberg_lettuce_in_SB.jpg/100px-Iceberg_lettuce_in_SB.jpg",
+      "image": "https://openmoji.org/data/color/svg/1F96C.svg",
       "nativeDistributions": [
         "Iraq"
       ],
@@ -773,7 +773,7 @@ export const plants = {
       "slug": "fragaria-x-ananassa",
       "commonName": "Strawberry",
       "familyName": "Rose family",
-      "image": "https://en.wikipedia.org/wiki/Strawberry#/media/File:Garden_strawberry_(Fragaria_%C3%97_ananassa)_single.jpg",
+      "image": "https://openmoji.org/data/color/svg/1F353.svg",
       "nativeDistributions": null,
       "duration": null,
       "edibleParts": null,
