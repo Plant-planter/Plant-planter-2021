@@ -37,7 +37,7 @@ export function renderGarden(gardenObject) {
     avatar.src = gardenObject.avatar;
     avatar.alt = `${gardenObject.name}'s avatar`;
     anchor.textContent = gardenObject.name;
-    anchor.href = '../garden/';
+    anchor.href = './garden/';
     delButton.textContent = '-';
 
     delButton.addEventListener('click', () => {

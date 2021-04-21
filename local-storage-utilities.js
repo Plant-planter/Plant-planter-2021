@@ -37,7 +37,7 @@ export function getSpecificGarden(gardenName) {
 export function createGarden(name) {
     const value = {
         name: name,
-        avatar: '../assets/chicken.png',
+        avatar: './assets/chicken.png',
         location: 'Portland',
         rows: generateGrid(5)
     };
