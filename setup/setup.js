@@ -1,15 +1,24 @@
+// import
 import { renderHeaderNav } from '../dom-utils.js';
 import { getCurrentGarden, getSpecificGarden, setGarden, getGardens, createGarden, setCurrentGarden } from '../local-storage-utilities.js';
 import { warnDuplicateName } from '../utils.js';
 
-renderHeaderNav();
-
-const gardenName = getCurrentGarden();
-let gardenObj = getSpecificGarden(gardenName);
-if (!gardenObj) gardenObj = createGarden(gardenName);
-
+// get html elements
 const form = document.querySelector('form');
 const inputName = document.getElementById('garden-name');
+const btnMain = document.getElementById('button-setup');
+
+// set up the state
+const gardenName = getCurrentGarden();
+let gardenObj = getSpecificGarden(gardenName);
+
+if (!gardenObj) gardenObj = createGarden(gardenName);
+else {
+    btnMain.textContent = 'Modify Garden';
+}
+
+// set up page and add event listeners
+renderHeaderNav();
 
 inputName.value = gardenName;
 
