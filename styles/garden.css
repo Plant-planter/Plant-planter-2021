@@ -80,6 +80,7 @@ main {
 
 img {
     width: 3rem;
+    height: 3rem;
 }
 
 .garden-grid > div:hover .delete-button {
@@ -94,5 +95,6 @@ img {
     margin-left: 5px;
     background-color: transparent;
     box-shadow: none;
+    position: absolute;
 
 }
