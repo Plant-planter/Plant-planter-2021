@@ -12,7 +12,7 @@ export function generateGrid(size) {
 
 export function phToColor(phMin, phMax) {
     const phAverage = (phMin + phMax) / 2;
-    return `hsl(${((phAverage - 4)/8) * 360}, 50%, 75%)`;
+    return `hsl(${((phAverage - 4) / 8) * 360}, 50%, 75%)`;
     /*
     const phInt = parseInt(phAverage); //this removes the decimal places and return a true int, if needed
     const phColors = [
