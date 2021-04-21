@@ -8,12 +8,16 @@ import { phToColor } from '../utils.js';
 const section = document.querySelector('.garden-grid');
 const plantSelector = document.getElementById('plant-selector');
 const printButton = document.querySelector('.print-button');
+const gardenImage = document.querySelector('.garden-image');
+const gardenTitle = document.querySelector('.garden-title');
 
 // set up state
 const gardenName = getCurrentGarden();
 let gardenObject = getSpecificGarden(gardenName);
 
-let selectedPlant = ''; // should contain the slug of the plant
+// generate image and title
+gardenImage.src = gardenObject.avatar;
+gardenTitle.textContent = 'Garden Name: ' + gardenName.charAt(0).toUpperCase() + gardenName.slice(1);
 
 // define functions
 function plantPlant(div, plantSlug) {
@@ -23,10 +27,6 @@ function plantPlant(div, plantSlug) {
     div.textContent = '✿';
     div.style.color = plant.flowerColor;
     div.style.backgroundColor = phToColor(plant.minPH, plant.maxPH);
-
-    /*// will remove this once pH function is implemented:
-    const bgColors = ['#ffadad', '#ffd6a5', '#fdffb6', '#caffbf', '#9bf6ff', '#a0c4ff', '#bdb2ff', '#ffc6ff', '#fffffc'];
-    div.style.backgroundColor = bgColors[Math.floor(Math.random() * bgColors.length)];*/
 }
 
 function generateGardenGrid() {
@@ -74,11 +74,6 @@ function createPlantOptions() {
         plantSelector.appendChild(option);
     } 
 }
-
-// add event handlers
-plantSelector.addEventListener('input', () => {
-    selectedPlant = plantSelector.value;
-});
 
 printButton.addEventListener('click', () => {
     window.print();

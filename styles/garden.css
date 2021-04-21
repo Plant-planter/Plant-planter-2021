@@ -41,11 +41,16 @@
 
 main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 main > * {
     margin: 1rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
 }
 
 select {
@@ -58,4 +63,13 @@ select {
     font-size: 18px;
     margin-top: 10px;
     padding: 5px;
-  }
+}
+
+.garden-label-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.garden-image{
+    width: 2rem;
+}
