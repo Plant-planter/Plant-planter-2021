@@ -21,7 +21,7 @@ gardenImage.src = '.' + gardenObject.avatar;
 gardenTitle.textContent = '' + gardenName.charAt(0).toUpperCase() + gardenName.slice(1);
 
 // define functions
-function plantPlant(div, plantSlug) {
+function plantPlant(div, plantSlug, nRow, nCol) {
     const plant = plants[plantSlug];
     const image = document.createElement('img');
     const deleteButton = document.createElement('button');
@@ -36,7 +36,9 @@ function plantPlant(div, plantSlug) {
         plantSelector.value = null;
         div.style.backgroundColor = 'transparent';
         div.innerHTML = '';
-        //edit state ie. remove this from local storagee
+        gardenObject.rows[nRow][nCol] = {};
+        setGarden(gardenName, gardenObject);
+        gardenObject = getSpecificGarden(gardenName);
     });
     deleteButton.classList.add('delete-button');
     div.appendChild(deleteButton);
@@ -51,15 +53,15 @@ function generateGardenGrid() {
         for (let box of row) {  //each row is an array, each box an object
             countCol++;
             const div = document.createElement('div');
-
+            const nRow = countRow - 1;
+            const nCol = countCol - 1;
             // if the box was already filled with a plant, load that
             if (box.plant) {
-                plantPlant(div, box.plant);
+                plantPlant(div, box.plant, nRow, nCol);
             }
 
             // add event listener for when box is clicked on
-            const nRow = countRow - 1;
-            const nCol = countCol - 1;
+
             div.addEventListener('click', () => {
                 if (plantSelector.value) {
                     // update the state
@@ -68,7 +70,7 @@ function generateGardenGrid() {
                     gardenObject = getSpecificGarden(gardenName);
 
                     // update the view
-                    plantPlant(div, plantSelector.value);
+                    plantPlant(div, plantSelector.value, nRow, nCol);
                 }
             });
             // append the child
