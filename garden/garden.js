@@ -17,7 +17,7 @@ const gardenName = getCurrentGarden();
 let gardenObject = getSpecificGarden(gardenName);
 
 // generate image and title
-gardenImage.src = gardenObject.avatar;
+gardenImage.src = '.' + gardenObject.avatar;
 gardenTitle.textContent = '' + gardenName.charAt(0).toUpperCase() + gardenName.slice(1);
 
 // define functions
@@ -82,8 +82,7 @@ printButton.addEventListener('click', () => {
 
 chartButton.addEventListener('click', () => {
     window.location = '../chart/';
-})
-
+});
 
 // initialize page 
 renderHeaderNav();
