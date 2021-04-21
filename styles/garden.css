@@ -44,13 +44,20 @@ main {
     flex-direction: column;
 }
 
-main > * {
-    margin: 1rem;
+.middle-section {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    padding: 0;
 }
 
-.container{
-    display: flex;
-    flex-direction: row;
+.middle-section > * {
+    padding: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.bottom-section > * {
+    margin: 0 0.5rem;
 }
 
 select {
@@ -65,11 +72,17 @@ select {
     padding: 5px;
 }
 
-.garden-label-container{
-    display: flex;
-    flex-direction: row;
+.garden-image {
+    width: 2rem;
 }
 
-.garden-image{
-    width: 2rem;
+.garden-title {
+    font-size: 1.7rem;
+    color: black;
+    opacity: 0.7;
+    font-family: 'Lilita One', 'Cabin', sans-serif;
+}
+
+.title-container {
+    margin-top: 1rem;
 }

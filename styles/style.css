@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
 body {
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
@@ -71,6 +72,9 @@ a {
     color:antiquewhite;
     text-shadow: 1px 1px 1px burlywood;
     text-decoration: none;
+    background-color: hsla(154, 28%, 62%, 70%);
+    padding: 0.25rem;
+    border-radius: 5px;
 }
 
 input, button {
@@ -83,9 +87,15 @@ input, button {
     color: #728074;
 }
 
+input {
+    padding-left: 0.5rem;
+}
 
 .logo-type {
     font-weight: normal;
+    color: black;
+    opacity: 0.7;
+    font-family: 'Lilita One', Cabin, sans-serif;
 }
 
 .gutter-right {
@@ -145,4 +155,18 @@ footer {
     80% {
         transform: rotate3d(10, 10, 10, 50deg) scale(1);
     }
+}
+
+.wrapper-h {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+
+.wrapper-v {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
 }

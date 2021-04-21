@@ -17,32 +17,40 @@
 
 <body>
     <header>
-        <h2 class="logo-type">Plant Planner</h2>
+        <h2 class="logo-type">Plant Plans</h2>
     </header>
     <main>
-        <div class="garden-label-container"><img class="garden-image">
-            <div class="garden-title"></div>
+        <div class="wrapper-v title-container">
+            <img class="garden-image">
+            <h2 class="garden-title"></h2>
         </div>
-        <div class="container">
-            <div class="ph-chart">
-                <div></div>
-                <div>7 pH</div>
-                <div></div>
-                <div>6 pH</div>
-                <div></div>
-                <div>5 pH</div>
+
+        <div class="wrapper-h middle-section">
+            <div class="wrapper-v">
+                <div class="ph-chart">
+                    <div></div>
+                    <div>7 pH</div>
+                    <div></div>
+                    <div>6 pH</div>
+                    <div></div>
+                    <div>5 pH</div>
+                </div>
+                <div class="side-bar">
+                    <select id="plant-selector">
+                        <option default disabled selected value="">Choose a Plant</option>
+                    </select>
+                </div>
             </div>
-            <div class="side-bar">
-                <select id="plant-selector">
-                    <option default disabled selected value="">Choose a Plant</option>
-                </select>
-            </div>
+
             <section class="garden-grid">
 
             </section>
         </div>
-    <a href="../chart/index.html">See your charts</a>
-    <button class="print-button">Print Your Garden</button>
+
+        <div class="wrapper-h bottom-section">
+            <button class="chart-button" href="../chart/index.html">See Your Charts</button>
+            <button class="print-button">Print Your Garden</button>
+        </div>
     </main>
 </body>
 
