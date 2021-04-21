@@ -23,10 +23,12 @@ gardenTitle.textContent = '' + gardenName.charAt(0).toUpperCase() + gardenName.s
 // define functions
 function plantPlant(div, plantSlug) {
     const plant = plants[plantSlug];
+    const image = document.createElement('img');
     div.title = plant.commonName + '\npH: ' + ((plant.minPH + plant.maxPH) / 2).toFixed(1);
     div.classList.add('filled');
-    div.textContent = '✿';
-    div.style.color = plant.flowerColor;
+    image.src = plant.image;
+    div.innerHTML = '';
+    div.appendChild(image);
     div.style.backgroundColor = phToColor(plant.minPH, plant.maxPH);
 }
 
