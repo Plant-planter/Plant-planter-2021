@@ -1,14 +1,25 @@
 /* add home page styles here */
+
+.create-garden {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.garden-slot {
+    margin-top: 1rem;
+    justify-content: space-between;
+    width: 20rem;
+}
+
 .garden-slot img{
-    width: 150px;
-    height: 150px;
+    width: 40px;
+    height: 40px;
 }
 
 .error-message{
     font-size: small;
 }
-
-
 
 .swing {
     -webkit-animation: swing 1s ease;

@@ -54,6 +54,7 @@ export function renderGarden(gardenObject) {
         
     });
     div.classList.add('garden-slot');
+    div.classList.add('wrapper-h');
     div.append(avatar, anchor, delButton);
     return div;
 }

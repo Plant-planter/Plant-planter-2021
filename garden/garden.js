@@ -8,6 +8,7 @@ import { phToColor } from '../utils.js';
 const section = document.querySelector('.garden-grid');
 const plantSelector = document.getElementById('plant-selector');
 const printButton = document.querySelector('.print-button');
+const chartButton = document.querySelector('.chart-button');
 const gardenImage = document.querySelector('.garden-image');
 const gardenTitle = document.querySelector('.garden-title');
 
@@ -17,7 +18,7 @@ let gardenObject = getSpecificGarden(gardenName);
 
 // generate image and title
 gardenImage.src = gardenObject.avatar;
-gardenTitle.textContent = 'Garden Name: ' + gardenName.charAt(0).toUpperCase() + gardenName.slice(1);
+gardenTitle.textContent = '' + gardenName.charAt(0).toUpperCase() + gardenName.slice(1);
 
 // define functions
 function plantPlant(div, plantSlug) {
@@ -78,6 +79,12 @@ function createPlantOptions() {
 printButton.addEventListener('click', () => {
     window.print();
 });
+
+chartButton.addEventListener('click', () => {
+    window.location = '../chart/';
+})
+
+
 // initialize page 
 renderHeaderNav();
 generateGardenGrid();
