@@ -1,9 +1,9 @@
-main {
+button {
     margin-bottom: 50px;
 }
 
 .chart-container {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     border-radius: 1rem;
     padding: 1rem;
     background-color: hsla(127, 17%, 82%, 75%);
@@ -13,4 +13,9 @@ section h2 {
     font-size: 1.7rem;
     color: black;
     opacity: 0.6;
+}
+
+main > section {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }

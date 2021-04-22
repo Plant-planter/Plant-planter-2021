@@ -77,3 +77,10 @@ fieldset.wrapper-h {
   width: 30rem;
   justify-content: space-between;
 }
+
+label {
+  font-family: 'Helvetica';
+  font-size: 22px;
+  font-style: italic;
+  color:#728074;
+}

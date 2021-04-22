@@ -12,7 +12,7 @@ export function renderHeaderNav(pages = ['/garden/', '/chart/', '/setup/', '/abo
         anchor.href = '../';
         anchor.textContent = 'home';
         nav.appendChild(anchor);
-        prefix = '..'
+        prefix = '..';
     }
 
     // loop through the list of pages and add them if they're not the current page
