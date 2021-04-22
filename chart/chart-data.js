@@ -3,7 +3,7 @@ import { plants } from '../data/data.js';
 // define functions
 export function loadHarvestChart(gardenData) {
     const ctx = document.getElementById('harvestChart').getContext('2d');
-    
+
     // fill up data arrays
     const names = [];
     const plantTimes = [];
@@ -27,6 +27,8 @@ export function loadHarvestChart(gardenData) {
             }
         }
     }
+
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     
     // make the chart
     let harvestChart = new Chart(ctx, { //eslint-disable-line
@@ -56,6 +58,15 @@ export function loadHarvestChart(gardenData) {
             scales: {
                 x: {
                     stacked: true,
+                    title: {
+                        display: true,
+                        text: 'Months'
+                    },
+                    ticks: {
+                        min: 0,
+                        stepSize: 30,
+                        callback: (val, ind, vals) => months[ind]
+                    }
                 },
                 y: {
                     stacked: true,
