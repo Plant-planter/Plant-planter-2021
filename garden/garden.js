@@ -23,13 +23,19 @@ gardenTitle.textContent = '' + gardenName.charAt(0).toUpperCase() + gardenName.s
 // define functions
 function plantPlant(div, plantSlug, nRow, nCol) {
     const plant = plants[plantSlug];
-    const image = document.createElement('img');
+    const plantImage = document.createElement('img');
+    const lightEmoji = document.createElement('span');
     const deleteButton = document.createElement('button');
+    const iconContainer = document.createElement('div');
+
+    lightEmoji.textContent = plant.light_emoji;
+    lightEmoji.classList.add('light-emoji');
+
     div.title = plant.commonName + '\npH: ' + ((plant.minPH + plant.maxPH) / 2).toFixed(1);
-    div.classList.add('filled');
-    image.src = plant.image;
+    div.classList.add('wrapper-v');
+    plantImage.src = plant.image;
     div.innerHTML = '';
-    div.appendChild(image);
+
     div.style.backgroundColor = phToColor(plant.minPH, plant.maxPH);
     deleteButton.textContent = 'X';
     deleteButton.addEventListener('click', () => {
@@ -41,7 +47,10 @@ function plantPlant(div, plantSlug, nRow, nCol) {
         gardenObject = getSpecificGarden(gardenName);
     });
     deleteButton.classList.add('delete-button');
-    div.appendChild(deleteButton);
+    iconContainer.classList.add('icon-container');
+    iconContainer.append(deleteButton, lightEmoji);
+    div.append(plantImage);
+    div.append(iconContainer);
 }
 
 
