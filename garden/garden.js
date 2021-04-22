@@ -31,8 +31,8 @@ function plantPlant(div, plantSlug, nRow, nCol) {
     lightEmoji.textContent = plant.light_emoji;
     lightEmoji.classList.add('light-emoji');
 
-    div.title = plant.commonName + '\npH: ' + ((plant.minPH + plant.maxPH) / 2).toFixed(1);
     div.classList.add('wrapper-v');
+    div.title = plant.commonName + '\npH: ' + ((plant.minPH + plant.maxPH) / 2).toFixed(1);
     plantImage.src = plant.image;
     div.innerHTML = '';
 
