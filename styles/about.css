@@ -4,8 +4,9 @@
     font-weight: 900;
 }
 
-h1 {
-    color: antiquewhite;
-    text-shadow: 1px 1px 1px burlywood;
-    font-weight: 900;
+h1.glow {
+    font-size: 1.5rem;
+    background-color: burlywood;
+    border-radius: 5px;
+    padding: 0 0.5rem;
 }

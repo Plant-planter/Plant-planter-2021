@@ -2,11 +2,13 @@
 import { renderHeaderNav } from '../dom-utils.js';
 import { getCurrentGarden, getSpecificGarden, setGarden, getGardens, createGarden, setCurrentGarden } from '../local-storage-utilities.js';
 import { warnDuplicateName } from '../utils.js';
+import { locations } from '../data/data.js';
 
 // get html elements
 const form = document.querySelector('form');
 const inputName = document.getElementById('garden-name');
 const btnMain = document.getElementById('button-setup');
+const slcLocation = document.querySelector('.location-select');
 
 // set up the state
 const gardenName = getCurrentGarden();
@@ -17,8 +19,18 @@ else {
     btnMain.textContent = 'Modify Garden';
 }
 
+function populateLocationSelect() {
+    for (let city of Object.keys(locations)) {
+        const option = document.createElement('option');
+        option.value = city;
+        option.textContent = city;
+        slcLocation.appendChild(option);
+    }
+}
+
 // set up page and add event listeners
 renderHeaderNav();
+populateLocationSelect();
 
 inputName.value = gardenName;
 
