@@ -19,7 +19,7 @@ function loadGardens() {
 
 // set event listeners to update state and DOM
 form.addEventListener('submit', (e) => {
-    // calls createGarden, sets window location
+    // Checks for garden name duplicate, sets window location
     e.preventDefault();
     const formData = new FormData(form);
     const gardenName = formData.get('garden-name');
