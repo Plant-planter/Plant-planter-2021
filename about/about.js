@@ -1,5 +1,5 @@
-import { renderHeaderNav } from '../dom-utils.js';
-import { getCurrentGarden, getSpecificGarden } from '../local-storage-utilities.js';
+import { renderHeaderNav } from '../utils-dom.js';
+import { getCurrentGarden, getSpecificGarden } from '../utils-local-storage.js';
 import { locations } from '../data/data.js';
 
 // get html dom elements
@@ -28,8 +28,7 @@ function setCityAndPeoples() {
         } else if (people !== Object.keys(peoples)[Object.keys(peoples).length - 1]) {
             tribeList.innerHTML += ', ';
         }
-    }
-    
+    } 
 }
 
 // initialize page

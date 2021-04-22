@@ -1,4 +1,4 @@
-import { getGardens, setGardens, setCurrentGarden } from './local-storage-utilities.js';
+import { getGardens, setGardens, setCurrentGarden } from './utils-local-storage.js';
 
 export function renderHeaderNav(pages = ['/garden/', '/chart/', '/setup/', '/about/']) {
     const header = document.querySelector('body > header');
@@ -24,7 +24,7 @@ export function renderHeaderNav(pages = ['/garden/', '/chart/', '/setup/', '/abo
             nav.appendChild(anchor);
         }
     }
-
+    
     // style and add the nav to the header
     nav.classList.add('header-nav');
     header.appendChild(nav);
@@ -51,11 +51,9 @@ export function renderGarden(gardenObject) {
 
     anchor.addEventListener('click', () => {
         setCurrentGarden(gardenObject.name);
-        
     });
-    div.classList.add('garden-slot');
-    div.classList.add('wrapper-h');
+
+    div.classList.add('garden-slot', 'wrapper-h');
     div.append(avatar, anchor, delButton);
     return div;
 }
-
