@@ -12,6 +12,7 @@ function loadHarvestChart() {
     
     // fill up data arrays
     const names = [];
+    const plantTimes = [];
     const harvestTimes = [];
     const colors = [];
     
@@ -23,8 +24,10 @@ function loadHarvestChart() {
                 if (!names.includes(plant.commonName)) {
                     names.push(plant.commonName);
                     colors.push(plant.flowerColor);
-                    const minDate = Math.min(plant.bestMonthToPlant * 12 + plant.minDaysTillHarvest, 364);
-                    const maxDate = Math.min(plant.bestMonthToPlant * 12 + plant.maxDaysTillHarvest, 365);
+                    const plantDate = 15 + Math.round(plant.bestMonthToPlant * 30.42);
+                    const minDate = Math.min(plant.minDaysTillHarvest, 364);
+                    const maxDate = Math.min(plant.maxDaysTillHarvest, 365);
+                    plantTimes.push([plantDate - 15, plantDate + 15]);
                     harvestTimes.push([minDate, maxDate]);
                 }
             }
@@ -36,33 +39,36 @@ function loadHarvestChart() {
         type: 'bar',
         data: {
             labels: names,
-            datasets: [{
-                label: 'Harvest Time',
-                data: harvestTimes,
-                backgroundColor: colors,
-                borderColor: 'green',
-                borderWidth: 1
-            }]
+            datasets: [
+                {
+                    label: 'Planting Time',
+                    data: plantTimes,
+                    backgroundColor: 'antiquewhite',
+                    borderColor: 'black',
+                    borderWidth: 1,
+                },{
+                    label: 'Harvest Time',
+                    data: harvestTimes,
+                    backgroundColor: 'burlywood',
+                    borderColor: 'black',
+                    borderWidth: 1,
+                }
+            ]
         },
         options: {
             indexAxis: 'y',
             responsive: true,
             scales: {
-                yAxes: [{
-                    display: true,
-                    ticks: {
-                        suggestedMin: 0,
-                        stepSize: 30.4,
-                        max: 365
-                    }
-                }]
+                x: {
+                    stacked: true,
+                },
+                y: {
+                    stacked: true,
+                }
             },
             plugins: {
                 legend: {
                     display: true,
-                    labels: {
-                        boxWidth: 0
-                    }
                 }
             }
         }
@@ -113,7 +119,7 @@ function loadTypeChart() {
                         '#758F9E',
                         '#E0DDC7'
                     ],
-                    borderColor: 'green',
+                    borderColor: 'black',
                     borderWidth: 1
                 }
             ]

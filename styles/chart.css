@@ -1,3 +1,16 @@
 main {
     margin-bottom: 50px;
 }
+
+.chart-container {
+    margin-bottom: 4rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: hsla(127, 17%, 82%, 75%);
+}
+
+section h2 {
+    font-size: 1.7rem;
+    color: black;
+    opacity: 0.6;
+}
