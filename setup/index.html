@@ -21,32 +21,46 @@
         <h2 class="logo-type">Plant Plans</h2>
     </header>
     <main>
-        <form name="setup-page-form">
+        <form name="setup-page-form wrapper-v">
             <div class="error-message" id="error"></div>
-            <label><input name="garden-name" class="garden-name" id="garden-name"></label>
-            <label><select name="location-select">
-                    <option>Portland</option>
-                </select></label>
-            <div name="radio-avatar" class="radio-avatar">
+
+            <fieldset class="wrapper-h">
+                <label>name</label>
+                <label>
+                    <input name="garden-name" class="garden-name" id="garden-name">
+                </label>
+            </fieldset>
+
+            <fieldset class="wrapper-h">
+                <label>location</label>
+                <label>
+                    <select name="location-select">
+                        <option>Portland</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset class="wrapper-h radio-avatar">
+                <label>avatar</label>
                 <label>
                     <input type="radio" name="avatar" value="chicken.png" required>
-                    <img src="../assets/chicken.png" />
+                    <img src="../assets/chicken.png" alt="chicken">
                 </label>
                 <label>
                     <input type="radio" name="avatar" value="cow.png" required>
-                    <img src="../assets/cow.png" />
+                    <img src="../assets/cow.png" alt="cow">
                 </label>
                 <label>
                     <input type="radio" name="avatar" value="pig.png" required>
-                    <img src="../assets/pig.png" />
+                    <img src="../assets/pig.png" alt="pig">
                 </label>
                 <label>
                     <input type="radio" name="avatar" value="rabbit.png" required>
-                    <img src="../assets/rabbit.png" />
+                    <img src="../assets/rabbit.png" alt="rabbit">
                 </label>
-            </div>
+            </fieldset>
 
-            <button>Create Garden</button>
+            <button id="button-setup">Create Garden</button>
 
         </form>
 

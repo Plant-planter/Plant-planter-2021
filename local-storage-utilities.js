@@ -18,7 +18,8 @@ export function getGardens() {
 
 export function setGarden(name, garden) {
     const gardens = getGardens();
-    gardens[name] = garden;
+    if (garden) gardens[name] = garden
+    else delete gardens[name];
 
     const stringyGardens = JSON.stringify(gardens);
     localStorage.setItem(GARDENS, stringyGardens);
@@ -42,7 +43,6 @@ export function createGarden(name) {
         rows: generateGrid(5)
     };
 
-    setGarden(name, value);
     return value;
 }
 
