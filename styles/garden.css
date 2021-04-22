@@ -61,10 +61,8 @@ main {
     margin: 0 0.5rem;
 }
 
-
-
 .garden-image {
-    width: 2rem;
+    width: 3rem;
 }
 
 .garden-title {
@@ -78,23 +76,37 @@ main {
     margin-top: 1rem;
 }
 
-img {
+.garden-grid img {
     width: 3rem;
     height: 3rem;
+    margin-top: 25px;
+}
+
+.garden-grid > div {
+    justify-content: space-between;
 }
 
 .garden-grid > div:hover .delete-button {
-    display: block;
+    visibility: visible;
     background-color: transparent;
 }
+
+.icon-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .delete-button {
-    display: none;
+    visibility: hidden;
     border-radius: 4px;
     font-size: 1rem;
-    margin-bottom: 5px;
-    margin-left: 5px;
     background-color: transparent;
     box-shadow: none;
-    position: absolute;
+}
 
+.light-emoji{
+    font-size: 1rem;
 }
