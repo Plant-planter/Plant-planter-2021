@@ -128,8 +128,67 @@ function loadTypeChart() {
     });
 }
 
+function loadRegionChart() {
+    const barRegionChart = document.getElementById('regionChart').getContext('2d');
+    
+    // fill up data arrays
+    const regions = {};
+    
+    for (let row of gardenData.rows) {
+        for (let box of row) {
+            const plantId = box.plant;
+            if (plantId) {
+                const plant = plants[plantId];
+                for (let region of plant.nativeDistributions) {
+                    if (region) {
+                        if (regions[region]) {
+                            regions[region]++;
+                        } else {
+                            regions[region] = 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    const sortedRegions = Object.keys(regions).sort((a, b) => regions[a] - regions[b]);
+    
+    const filteredRegions = sortedRegions.slice(sortedRegions.length - 12, sortedRegions.length);
+    console.log(filteredRegions);
+    const dataValues = [];
+    filteredRegions.forEach(region => {
+        dataValues.push(regions[region]);
+    });
+    // make the chart
+    var regionChart = new Chart(barRegionChart, { //eslint-disable-line
+        type: 'bar',
+        data: {
+            labels: filteredRegions,
+            datasets: [
+                {
+                    label: 'Region',
+                    data: dataValues,
+                    backgroundColor: [
+                        '#AAD6E1',
+                        '#FDFAE5',
+                        '#D1E9EF',
+                        '#FFE9E8',
+                        '#758F9E',
+                        '#E0DDC7'
+                    ],
+                    borderColor: 'black',
+                    borderWidth: 1
+                }
+            ]
+        }
+    });
+}
+
 renderHeaderNav();
 loadHarvestChart();
 loadTypeChart();
+loadRegionChart();
+
+
 
 
