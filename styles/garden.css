@@ -28,6 +28,7 @@
     background: linear-gradient(hsl(157.5, 50%, 75%), hsl(135, 50%, 75%), hsl(112.5, 50%, 75%), hsl(90, 50%, 75%), hsl(67.5, 50%, 75%), hsl(45, 50%, 75%), hsl(22.5, 50%, 75%));
     display: grid;
     grid-template-rows: repeat(6, 1fr);
+    border-radius: 10px;
 }
 
 .ph-chart > div {
@@ -109,4 +110,20 @@ main {
 
 .light-emoji{
     font-size: 1rem;
+}
+
+.garden-grid :first-child{
+    border-top-left-radius: 10px;
+}
+
+.garden-grid :nth-child(5){
+    border-top-right-radius: 10px;
+}
+
+.garden-grid :nth-child(21){
+    border-bottom-left-radius: 10px;
+}
+
+.garden-grid :nth-child(25){
+    border-bottom-right-radius: 10px;
 }

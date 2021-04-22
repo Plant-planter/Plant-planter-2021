@@ -142,7 +142,6 @@ export function loadRegionChart(gardenData) {
     const sortedRegions = Object.keys(regions).sort((a, b) => regions[a] - regions[b]);
     
     const filteredRegions = sortedRegions.slice(sortedRegions.length - 12, sortedRegions.length);
-    console.log(filteredRegions);
     const dataValues = [];
     filteredRegions.forEach(region => {
         dataValues.push(regions[region]);
