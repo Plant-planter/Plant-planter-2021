@@ -1,6 +1,6 @@
 import { renderHeaderNav } from '../dom-utils.js';
 import { getCurrentGarden, getSpecificGarden } from '../local-storage-utilities.js';
-import { locations } from '../data/data.js'
+import { locations } from '../data/data.js';
 
 // get html dom elements
 const city = document.querySelector('.city-name');
@@ -24,7 +24,7 @@ function setCityAndPeoples() {
         tribeList.appendChild(anchor);
 
         if (people === Object.keys(peoples)[Object.keys(peoples).length - 2]) {
-            tribeList.innerHTML += ', and '
+            tribeList.innerHTML += ', and ';
         } else if (people !== Object.keys(peoples)[Object.keys(peoples).length - 1]) {
             tribeList.innerHTML += ', ';
         }
