@@ -46,7 +46,8 @@ function loadHarvestChart() {
                     backgroundColor: 'antiquewhite',
                     borderColor: 'black',
                     borderWidth: 1,
-                },{
+                },
+                {
                     label: 'Harvest Time',
                     data: harvestTimes,
                     backgroundColor: 'burlywood',

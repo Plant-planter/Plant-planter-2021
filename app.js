@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { getGardens, createGarden, setCurrentGarden } from './local-storage-utilities.js';
+import { getGardens, setCurrentGarden } from './local-storage-utilities.js';
 import { renderGarden } from './dom-utils.js';
 import { warnDuplicateName } from './utils.js';
 

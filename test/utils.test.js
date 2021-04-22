@@ -11,7 +11,7 @@ test('test the createGarden function', (expect) => {
     // Set up your arguments and expectations
     const expected = {
         name: undefined,
-        avatar: '../assets/chicken.png',
+        avatar: './assets/chicken.png',
         location: 'Portland',
         rows: generateGrid(5), 
     };
