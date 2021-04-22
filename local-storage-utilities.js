@@ -18,7 +18,7 @@ export function getGardens() {
 
 export function setGarden(name, garden) {
     const gardens = getGardens();
-    if (garden) gardens[name] = garden
+    if (garden) gardens[name] = garden;
     else delete gardens[name];
 
     const stringyGardens = JSON.stringify(gardens);
