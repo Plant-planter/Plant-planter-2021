@@ -11,9 +11,7 @@ export function getGardens() {
         localStorage.setItem(GARDENS, JSON.stringify({}));
         return {};
     }
-
-    const parsed_garden = JSON.parse(gardens);
-    return parsed_garden;
+    return JSON.parse(gardens);
 }
 
 export function setGarden(name, garden) {
@@ -21,8 +19,7 @@ export function setGarden(name, garden) {
     if (garden) gardens[name] = garden;
     else delete gardens[name];
 
-    const stringyGardens = JSON.stringify(gardens);
-    localStorage.setItem(GARDENS, stringyGardens);
+    localStorage.setItem(GARDENS, JSON.stringify(gardens));
 }
 
 export function setGardens(gardens) {
@@ -53,4 +50,3 @@ export function setCurrentGarden(gardenName) {
 export function getCurrentGarden() {
     return localStorage.getItem(CURRENTGARDEN);
 }
-

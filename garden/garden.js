@@ -1,6 +1,6 @@
 // imports
-import { renderHeaderNav } from '../dom-utils.js';
-import { getSpecificGarden, getCurrentGarden, setGarden } from '../local-storage-utilities.js';
+import { renderHeaderNav } from '../utils-dom.js';
+import { getSpecificGarden, getCurrentGarden, setGarden } from '../utils-local-storage.js';
 import { plants } from '../data/data.js';
 import { phToColor } from '../utils.js';
 
@@ -46,13 +46,12 @@ function plantPlant(div, plantSlug, nRow, nCol) {
         setGarden(gardenName, gardenObject);
         gardenObject = getSpecificGarden(gardenName);
     });
+
     deleteButton.classList.add('delete-button');
     iconContainer.classList.add('icon-container');
     iconContainer.append(deleteButton, lightEmoji);
-    div.append(plantImage);
-    div.append(iconContainer);
+    div.append(plantImage, iconContainer);
 }
-
 
 function generateGardenGrid() {
     let countRow = 0;
@@ -70,7 +69,6 @@ function generateGardenGrid() {
             }
 
             // add event listener for when box is clicked on
-
             div.addEventListener('click', () => {
                 if (plantSelector.value) {
                     // update the state
@@ -97,13 +95,9 @@ function createPlantOptions() {
     }
 }
 
-printButton.addEventListener('click', () => {
-    window.print();
-});
+printButton.addEventListener('click', () => window.print());
 
-chartButton.addEventListener('click', () => {
-    window.location = '../chart/';
-});
+chartButton.addEventListener('click', () => window.location = '../chart/');
 
 // initialize page 
 renderHeaderNav();

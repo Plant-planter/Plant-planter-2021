@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
-import { getGardens, setCurrentGarden } from './local-storage-utilities.js';
-import { renderGarden } from './dom-utils.js';
+import { getGardens, setCurrentGarden } from './utils-local-storage.js';
+import { renderGarden } from './utils-dom.js';
 import { warnDuplicateName } from './utils.js';
 
 const gardenList = document.querySelector('.gardens');
@@ -30,7 +30,6 @@ form.addEventListener('submit', (e) => {
     }
 
     setCurrentGarden(gardenName);
-
     window.location = './setup/';
 });
 

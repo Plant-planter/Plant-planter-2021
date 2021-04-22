@@ -1,6 +1,6 @@
 // import
-import { renderHeaderNav } from '../dom-utils.js';
-import { getCurrentGarden, getSpecificGarden, setGarden, getGardens, createGarden, setCurrentGarden } from '../local-storage-utilities.js';
+import { renderHeaderNav } from '../utils-dom.js';
+import { getCurrentGarden, getSpecificGarden, setGarden, getGardens, createGarden, setCurrentGarden } from '../utils-local-storage.js';
 import { warnDuplicateName } from '../utils.js';
 import { locations } from '../data/data.js';
 
@@ -15,9 +15,7 @@ const gardenName = getCurrentGarden();
 let gardenObj = getSpecificGarden(gardenName);
 
 if (!gardenObj) gardenObj = createGarden(gardenName);
-else {
-    btnMain.textContent = 'Modify Garden';
-}
+else btnMain.textContent = 'Modify Garden';
 
 function populateLocationSelect() {
     for (let city of Object.keys(locations)) {
@@ -58,6 +56,3 @@ form.addEventListener('submit', (e) => {
 
     window.location = '../garden/';
 });
-
-
-

@@ -146,6 +146,7 @@ export function loadRegionChart(gardenData) {
     filteredRegions.forEach(region => {
         dataValues.push(regions[region]);
     });
+    
     // make the chart
     var regionChart = new Chart(barRegionChart, { //eslint-disable-line
         type: 'bar',

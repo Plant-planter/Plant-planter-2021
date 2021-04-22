@@ -1,5 +1,5 @@
-import { renderHeaderNav } from '../dom-utils.js';
-import { getCurrentGarden, getSpecificGarden } from '../local-storage-utilities.js';
+import { renderHeaderNav } from '../utils-dom.js';
+import { getCurrentGarden, getSpecificGarden } from '../utils-local-storage.js';
 import { loadHarvestChart, loadTypeChart, loadRegionChart } from './chart-data.js';
 
 // set up state and get dom elements
@@ -12,6 +12,4 @@ loadTypeChart(gardenData);
 loadRegionChart(gardenData);
 
 // load the charts and add event handlers
-printButton.addEventListener('click', () => {
-    window.print();
-});
+printButton.addEventListener('click', () => window.print());
