@@ -203,3 +203,7 @@ footer {
     align-items: center;
     justify-items: center;
 }
+
+hr {
+    width: 100%;
+}
