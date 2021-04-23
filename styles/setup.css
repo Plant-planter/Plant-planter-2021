@@ -18,8 +18,8 @@
 }
 
 [type=radio]:checked + img {
-   filter: drop-shadow(5px 5px 5px rgb(126, 173, 87));
-   filter: drop-shadow(5px 5px 5px burlywood);
+  filter: drop-shadow(5px 5px 5px rgb(126, 173, 87));
+  filter: drop-shadow(5px 5px 5px burlywood);
 }
 
 main {
