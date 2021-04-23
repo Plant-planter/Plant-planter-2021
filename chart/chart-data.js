@@ -31,7 +31,7 @@ export function loadHarvestChart(gardenData) {
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     
     // make the chart
-    let harvestChart = new Chart(ctx, { 
+    let harvestChart = new Chart(ctx, { //eslint-disable-line
         type: 'bar',
         data: {
             labels: names,
