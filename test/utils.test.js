@@ -1,8 +1,8 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { createGarden } from '../local-storage-utilities.js';
+import { createGarden, getSpecificGarden } from '../utils-local-storage.js';
 import { generateGrid, phToColor } from '../utils.js';
-import { getSpecificGarden } from '../local-storage-utilities.js';
+
 
 const test = QUnit.test;
 

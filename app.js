@@ -6,7 +6,7 @@ import { warnDuplicateName } from './utils.js';
 const gardenList = document.querySelector('.gardens');
 const form = document.querySelector('form');
 
-// initialize state
+// define functions
 function loadGardens() {
     const gardens = getGardens();
 
@@ -19,7 +19,7 @@ function loadGardens() {
 
 // set event listeners to update state and DOM
 form.addEventListener('submit', (e) => {
-    // Checks for garden name duplicate, sets window location
+    // check for garden name duplicate, set window location
     e.preventDefault();
     const formData = new FormData(form);
     const gardenName = formData.get('garden-name');
