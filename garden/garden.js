@@ -22,6 +22,7 @@ gardenTitle.textContent = '' + gardenName.charAt(0).toUpperCase() + gardenName.s
 
 // define functions
 function plantPlant(div, plantSlug, nRow, nCol) {
+    // place plant inside of grid box
     const plant = plants[plantSlug];
     const plantImage = document.createElement('img');
     const lightEmoji = document.createElement('span');
@@ -29,24 +30,28 @@ function plantPlant(div, plantSlug, nRow, nCol) {
     const iconContainer = document.createElement('div');
 
     lightEmoji.textContent = plant.light_emoji;
-    lightEmoji.classList.add('light-emoji');
-
-    div.classList.add('wrapper-v');
-    div.title = plant.commonName + '\npH: ' + ((plant.minPH + plant.maxPH) / 2).toFixed(1);
     plantImage.src = plant.image;
-    div.innerHTML = '';
 
+    div.innerHTML = '';
+    div.title = plant.commonName + '\npH: ' + ((plant.minPH + plant.maxPH) / 2).toFixed(1);    
     div.style.backgroundColor = phToColor(plant.minPH, plant.maxPH);
+
+    // make delete button function
     deleteButton.textContent = 'X';
     deleteButton.addEventListener('click', () => {
+        // update view
         plantSelector.value = null;
         div.style.backgroundColor = 'transparent';
         div.innerHTML = '';
+        // update state
         gardenObject.rows[nRow][nCol] = {};
         setGarden(gardenName, gardenObject);
         gardenObject = getSpecificGarden(gardenName);
     });
 
+    // add classes and append dom elements
+    div.classList.add('wrapper-v');
+    lightEmoji.classList.add('light-emoji');
     deleteButton.classList.add('delete-button');
     iconContainer.classList.add('icon-container');
     iconContainer.append(deleteButton, lightEmoji);

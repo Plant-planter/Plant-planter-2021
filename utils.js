@@ -11,7 +11,9 @@ export function generateGrid(size) {
 
 export function phToColor(phMin, phMax) {
     const phAverage = (phMin + phMax) / 2;
-    return `hsl(${((phAverage - 4) / 8) * 360}, 50%, 75%)`;
+    const normalizedPh = (phAverage - 4) / 8;
+    const hue = normalizedPh * 360;
+    return `hsl(${hue}, 50%, 75%)`;
 } 
 
 export function warnDuplicateName() {

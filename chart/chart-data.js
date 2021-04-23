@@ -64,7 +64,7 @@ export function loadHarvestChart(gardenData) {
                     },
                     ticks: {
                         min: 0,
-                        stepSize: 30,
+                        stepSize: 30.4,
                         callback: (val, ind, vals) => months[ind] //eslint-disable-line
                     }
                 },
