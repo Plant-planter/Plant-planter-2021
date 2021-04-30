@@ -1,6 +1,14 @@
 **Miro**: https://miro.com/app/board/o9J_lJBY_gI=/
 **Figma**: https://www.figma.com/file/EZv0rNiCrOf1poqVGIKLj4/Garden-Planner
 
+## Description  
+    -Plant Plans allows users to create and save 5x5 garden grids, allowing them to plan a garden with helpful info such as ideal soil pH and sun for each plant. 
+    -There are three charts:
+     1) The harvest chart demonstrates ideal planting and harvesting time for each plant.
+     2) The habits chart tells you whether the plants in your garden are shrubs, vines, herbs, etc.
+     3) The country of origin plant is allows users to see where their plants generally come from
+     -Enjoy planting your garden!
+
 ## Plan
 
 ### Header Nav
