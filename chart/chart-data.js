@@ -21,6 +21,7 @@ export function loadHarvestChart(gardenData) {
                     const plantDate = 15 + Math.round(plant.bestMonthToPlant * 30.42);
                     const minDate = Math.min(plant.minDaysTillHarvest, 364);
                     const maxDate = Math.min(plant.maxDaysTillHarvest, 365);
+                    // this could use some comments or well-named consts. Why 15, for example?
                     plantTimes.push([plantDate - 15, plantDate + 15]);
                     harvestTimes.push([minDate, maxDate]);
                 }
@@ -28,6 +29,7 @@ export function loadHarvestChart(gardenData) {
         }
     }
 
+    // you can use a modulo on the index (months[someIndex % months.length]) to solve this problem without having to make a weird repeating array
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     
     // make the chart
@@ -93,6 +95,7 @@ export function loadTypeChart(gardenData) {
             if (plantId) {
                 const plant = plants[plantId];
                 for (let habit of plant.habits) {
+                    // nice use of the counting pattern we did in class!
                     if (habits[habit]) {
                         habits[habit]++;
                     } else {
@@ -150,6 +153,7 @@ export function loadRegionChart(gardenData) {
             }
         }
     }
+    // nice work figuring out the sorting! not an easy thing to do
     const sortedRegions = Object.keys(regions).sort((a, b) => regions[a] - regions[b]);
     
     const filteredRegions = sortedRegions.slice(sortedRegions.length - 12, sortedRegions.length);
