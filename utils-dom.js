@@ -5,6 +5,7 @@ export function renderHeaderNav(pages = ['/garden/', '/chart/', '/setup/', '/abo
     const nav = document.createElement('nav');
     const currentPage = window.location.pathname;
 
+    // woooah. this is some pretty intense imperative logic! Very cool way of solving pathing issues dynamically!
     let prefix = '.';
     // if you're not on the homepage add a "home" link
     if (currentPage !== '/') {
@@ -46,6 +47,7 @@ export function renderGarden(gardenObject) {
         const gardens = getGardens();
         delete gardens[gardenObject.name];
         setGardens(gardens);
+        // are you using reload to refresh the state? that's okay, but I'd rather see you have a "resetState" function so you can have more control over the UX, rather than handing that control to the browser. Gets feeling a little rube-goldbergy
         location.reload();
     });
 

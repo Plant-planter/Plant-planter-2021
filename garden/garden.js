@@ -17,8 +17,8 @@ const gardenName = getCurrentGarden();
 let gardenObject = getSpecificGarden(gardenName);
 
 // generate image and title
-gardenImage.src = '.' + gardenObject.avatar;
-gardenTitle.textContent = '' + gardenName.charAt(0).toUpperCase() + gardenName.slice(1);
+gardenImage.src = `.${gardenObject.avatar}`;
+gardenTitle.textContent = `${gardenName.charAt(0).toUpperCase()}${gardenName.slice(1)}`;
 
 // define functions
 function plantPlant(div, plantSlug, nRow, nCol) {
@@ -33,6 +33,7 @@ function plantPlant(div, plantSlug, nRow, nCol) {
     plantImage.src = plant.image;
 
     div.innerHTML = '';
+    // this could use some explanatory comments
     div.title = plant.commonName + '\npH: ' + ((plant.minPH + plant.maxPH) / 2).toFixed(1);    
     div.style.backgroundColor = phToColor(plant.minPH, plant.maxPH);
 
@@ -66,6 +67,7 @@ function generateGardenGrid() {
         for (let box of row) {  //each row is an array, each box an object
             countCol++;
             const div = document.createElement('div');
+            // these variable names are a bit tough to read, and it would be hard to maintain this if I were handed this project
             const nRow = countRow - 1;
             const nCol = countCol - 1;
             // if the box was already filled with a plant, load that
@@ -92,6 +94,7 @@ function generateGardenGrid() {
 }
 
 function createPlantOptions() {
+    // nice object iteration!
     for (let plant of Object.values(plants)) {
         const option = document.createElement('option');
         option.value = plant.slug;

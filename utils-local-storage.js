@@ -16,6 +16,7 @@ export function getGardens() {
 
 export function setGarden(name, garden) {
     const gardens = getGardens();
+    // nice logic here! It does look like you use this function for both adding and deleting gardens (by passing null as the second param in setup.js), but this signature is a little obstuse. I would probably just have a separate function for deleting gardens
     if (garden) gardens[name] = garden;
     else delete gardens[name];
 
@@ -37,6 +38,7 @@ export function createGarden(name) {
         name: name,
         avatar: './assets/chicken.png',
         location: 'Portland',
+        // nice!
         rows: generateGrid(5)
     };
 

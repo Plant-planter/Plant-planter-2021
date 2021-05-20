@@ -18,6 +18,7 @@ if (!gardenObj) gardenObj = createGarden(gardenName);
 else btnMain.textContent = 'Modify Garden';
 
 function populateLocationSelect() {
+    // happy to see object iteration skills being used! y'all really stretched to the upper limits of your toolkit here :-D
     for (let city of Object.keys(locations)) {
         const option = document.createElement('option');
         option.value = city;
@@ -39,12 +40,16 @@ form.addEventListener('submit', (e) => {
     const formSelect = formData.get('location-select');
     const formRadio = formData.get('avatar');
 
+    // such a nice, concise line. I'd probably like it to be "gardenNames" instead of gardens, since these are strings not objects
     const gardens = Object.keys(getGardens());
     if (formInput !== gardenName) {
         if (gardens.includes(formInput)) {
             warnDuplicateName();
-            return false;
+            // I think the value won't return to anywhere from an event handler, so a plain return is more standard
+            return;
         }
+
+        // again, this is a confusing signature--this function probably wants to do too much
         setGarden(gardenName, null);
         setCurrentGarden(formInput);
     }

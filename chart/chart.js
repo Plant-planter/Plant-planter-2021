@@ -12,4 +12,5 @@ loadTypeChart(gardenData);
 loadRegionChart(gardenData);
 
 // load the charts and add event handlers
+// lolol i love this
 printButton.addEventListener('click', () => window.print());
